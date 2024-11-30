@@ -1,0 +1,598 @@
+/* ==UserStyle==
+@name           Google Classroom Rose Pine
+@namespace      rosepinegoogleclassrom
+@description    Rose Pine theme for Google Classroom, code based off of https://cdn.jsdelivr.net/gh/uso-archive/data@09bf0fd79f67192c2975ba68052a7409f435e6dc/data/styles/179514.json.
+@version        0.1.0
+@homepageURL	https://github.com/WalkQuackBack/rose-pine-google-classroom
+@supportURL		https://github.com/WalkQuackBack/rose-pine-google-classroom/issues
+@license		MIT
+@preprocessor   stylus
+
+@var color      bg-primary     "Background Primary"      #191724
+@var color      bg-secondary   "Background Secondary"    #1f1d2e
+@var color      bg-tertiary    "Background Tertiary"     #26233a
+@var color      bg-hover       "Background Hover"        #191724
+@var color      bg-active      "Background active"       #45455a
+@var color      bg-2nd-hover   "BG Secondary Hover"      #1f1d2e
+@var color      border-primary "Border Primary"          #524f67
+@var color      border-2nd     "Border Secondary"        #403d52
+@var color      navbar         "Navigation Bar"          #26233a
+@var color      text-primary   "Text Primary"            #e0def4
+@var color      text-hover     "Text Primary Hover"      #e0def4
+@var color      text-secondary "Text Secondary"          #908caa
+@var color      text-tertiary  "Text Tertiary"           #6e6a86
+@var color      active-button  "Active Button"           #202020
+@var color      primary        "Primary Colour"          #c4a7e7
+@var color      on-primary     "On Primary"              #26233a
+@var color      error          "Error"                   #eb6f92
+@var color      on-error       "On Error"                #191724
+@var color      hover-thingy   "Hover Thingy"            #26233a
+
+==/UserStyle== */
+@-moz-document domain("classroom.google.com")
+{
+    body
+    {
+        background-color: bg-primary;
+        color: text-primary;
+        color-scheme: dark;
+        caret-color: primary;
+        scrollbar-width: none;
+        --mdc-theme-on-surface: text-primary;
+        --mdc-theme-text-primary-on-background: text-primary;
+        --gm-hairlinebutton-ink-color: primary;
+        --gm-hairlinebutton-ink-color--stateful: primary;
+        --gm-hairlinebutton-state-color: primary;
+        --gm-hairlinebutton-outline-color--stateful: primary;
+        --mdc-text-button-label-text-color: primary;
+        --mdc-text-button-hover-label-text-color: primary;
+        --mdc-text-button-focus-label-text-color: primary;
+        --mdc-text-button-pressed-label-text-color: primary;
+        --mdc-text-button-hover-state-layer-color: primary;
+        --mdc-text-button-pressed-state-layer-color: primary;
+        --mdc-outlined-button-label-text-color: text-primary;
+        --mdc-outlined-button-hover-label-text-color: text-primary;
+        --mdc-outlined-button-focus-label-text-color: text-primary;
+        --mdc-outlined-button-pressed-label-text-color: text-primary;
+        --mdc-outlined-button-disabled-label-text-color: text-primary;
+        --mdc-outlined-button-outline-color: primary;
+        --mdc-outlined-button-hover-state-layer-color: primary;
+        --mdc-outlined-button-pressed-state-layer-color: primary;
+        --mdc-outlined-button-focus-outline-color: primary;
+        --gm-fillbutton-container-color: primary;
+        --gm-fillbutton-ink-color: on-primary;
+        --gm-fillbutton-disabled-ink-color: text-tertiary;
+        --gm-colortextbutton-state-color: primary;
+        --gm-colortextbutton-ink-color: primary;
+        --gm-colortextbutton-ink-color--stateful: primary;
+        --gm-colortextbutton-disabled-ink-color: text-tertiary;
+        --gm-iconbutton-disabled-ink-color: text-tertiary;
+        --mdc-ripple-color: primary;
+        --mdc-checkbox-unselected-hover-icon-color: text-primary;
+        --mdc-checkbox-unselected-focus-icon-color: text-primary;
+        --mdc-checkbox-unselected-icon-color: text-primary;
+        --mdc-checkbox-unselected-pressed-icon-color: text-primary;
+        --mdc-checkbox-unselected-hover-state-layer-color: primary;
+        --mdc-checkbox-unselected-pressed-state-layer-color: primary;
+        --mdc-checkbox-selected-checkmark-color: on-primary;
+        --mdc-checkbox-selected-icon-color: primary;
+        --mdc-checkbox-selected-hover-icon-color: primary;
+        --mdc-checkbox-selected-focus-icon-color: primary;
+        --mdc-checkbox-selected-pressed-icon-color: primary;
+        --mdc-checkbox-selected-hover-state-layer-color: primary;
+        --mdc-checkbox-selected-pressed-state-layer-color: primary;
+        --gm-protectedbutton-ink-color: primary;
+        --gm-protectedbutton-ink-color--stateful: primary;
+        --gm-protectedbutton-state-color: primary;
+        --gm-protectedbutton-container-color: bg-secondary;
+        --pkw-background: bg-tertiary;
+        --pkw-on-surface: text-primary;
+        --pkw-on-surface-variant: text-secondary;
+        --pkw-outline-variant: border-2nd;
+        --pkw-outline: border-2nd;
+        --gm-outlinedtextfield-ink-color: primary;
+        --gm-outlinedtextfield-caret-color: primary;
+        --gm-outlinedtextfield-helper-text-color: text-primary;
+        --gm-outlinedtextfield-label-color: text-primary;
+        --gm-outlinedtextfield-outline-color: border-primary;
+        --gm-outlinedtextfield-placeholder-color: text-primary;
+        --gm-outlinedtextfield-prefix-color: text-primary;
+        --gm-outlinedtextfield-suffix-color: text-primary;
+        /*         --gm-outlinedtextfield-ink-color--disabled
+        --gm-outlinedtextfield-outline-color--disabled
+        --gm-outlinedtextfield-label-color--disabled
+        --gm-outlinedtextfield-icon-color--disabled
+        --gm-outlinedtextfield-icon-color--disabled
+        --gm-outlinedtextfield-helper-text-color--disabled
+        --gm-outlinedtextfield-character-counter-color--disabled
+        --gm-outlinedtextfield-placeholder-color--disabled
+        --gm-outlinedtextfield-placeholder-color--disabled
+        --gm-outlinedtextfield-placeholder-color--disabled
+        --gm-outlinedtextfield-prefix-color--disabled
+        --gm-outlinedtextfield-suffix-color--disabled */
+        --gm-outlinedtextfield-outline-color--stateful: primary;
+        --gm-outlinedtextfield-label-color--stateful: primary;
+        --gm-outlinedtextfield-caret-color--error: primary;
+        --gm-outlinedtextfield-helper-text-color--error: error;
+        --gm-outlinedtextfield-outline-color--error: error;
+        --gm-outlinedtextfield-icon-color--error: error;
+        --gm-outlinedtextfield-outline-color--error-stateful: error;
+        --gm-outlinedtextfield-label-color--stateful: error;
+        --gm-outlinedtextfield-label-color--error: error;
+    }
+    ::selection
+    {
+        background-color: alpha(primary, 0.25);
+    }
+    .I7OXgf, .TdC1bb, .bc5ALd .VfPpkd-hOoMI-haAclf
+    {
+        background-color: bg-primary;
+    }
+    .mwJvDe .KEDCCd, .Tabkde, .Tabkde .OX4Vcb, .ETRkCe, .lXuxY .u73Apc
+    {
+        background-color: navbar;
+        border-color: border-2nd;
+    }
+    .OX4Vcb
+    {
+        scrollbar-width: none;
+        padding: 0.5rem;
+    }
+    .joJglb
+    {
+        background-color: bg-secondary;
+        border-color: bg-secondary;
+    }
+    .Xi8cpb:active .p1KYTc, .qr5cDe:active .p1KYTc
+    {
+        background-color: primary;
+        opacity: 0.06;
+    }
+    .Aopndd, .GWZ7yf, .d4Fe0d, .qk0lee, .MHxtic, .zE55kf, .uWetjb, .PeGHgb:not(.Q8U8uc) .Ono85c + .oh9CFb, .PeGHgb:not(.Q8U8uc) .ruTJle + .fETHd
+    {
+        border-radius: 1rem;
+    }
+    .LBlAUc
+    {
+        margin-bottom: 1rem;
+    }
+    .MHxtic:first-child
+    {
+        margin-top: 0;
+    }
+    .WMQb5e .oBSRLe, .s2g3Xd, .q1Kmyc, .SZ0kZe, .gKkZCe, .E5f6Vd, .svNSpd, .Rj2Mlf:not(:disabled), .LjDxcd:not(:disabled), .ar1wE .eqqrO, .ySjuvd .eqqrO, .AeAAkf, .DC55n td, .a4YS1c, .hYt5f.FRDm8d .WkZsyc:not(:last-child), .hYt5f.FRDm8d .Kql9ed:not(:last-child), .geqPvd .VfPpkd-WLXbod, .geqPvd, .tUJKGd:not(:first-child), .d6CWTd, .ycbm1d, .LDr2ne, .O9YpHb, .Iwp0Ue:not(:first-child), .i3bmcb, .yHjGtf, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .pvb7Pc, .t5tYqf .cmTiyd, .cmTiyd, .feojCc, .bc5ALd.VfPpkd-Zc28rc-OWXEXe-Mgvhmd-S2QgGf-FNFY6c .VfPpkd-hOoMI-haAclf, .bc5ALd.VfPpkd-Zc28rc-OWXEXe-WRCQcd-S2QgGf-FNFY6c .VfPpkd-hOoMI-haAclf, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe
+    {
+        border-color: border-primary;
+    }
+    .xVPuB .mIZh1c, .vnnr5e .mIZh1c, .oQ5Hqe, .VfPpkd-rymPhb-clz4Ic
+    {
+        background-color: border-2nd;
+    }
+    .MHxtic:not(:last-child), .LKqFXc, .Rj2Mlf:not(:disabled):hover, .uO32ac, .ypv4re, .nl5VRd, .VKRoqe, .gpeXDe, .meyvr, .Lp3y7d, .LqHDgc
+    {
+        border-color: border-2nd;
+    }
+    .dDKhVc-Wvd9Cc, .dDKhVc, .WdYux, .tLDEHd, .ViCi4, .DPvwYc, .Erb9le:not(.RDPZE) .qmMNRc:hover, .Erb9le:not(.RDPZE) .qmMNRc.y7OZL, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .FUvKMe, .cSyPgb, .lziZub, .lziZub:visited, .onkcGd, .onkcGd:visited, .WPhuJf, .WPhuJf:visited, .OGhwGf, .OGhwGf:visited, .iLjzDc, .K6Ovqd, .sdDCme, .oBSRLe, .IMvYId, .xVPuB .snByac, .vnnr5e .snByac .IMvYId:visited, .LjDxcd:not(:disabled), .asQXV-FGzYL, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .gb_Ea svg, .gb_Oc svg, .gb_rd .gb_sd, .gb_1c .gb_sd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xVPuB .snByac, .vnnr5e .snByac, .UQuaGc.RDPZE, .ubqkMe .kByKEb, .RyF19b .kByKEb, .J2ZeGc .kByKEb, .svdjhb .kByKEb, .WbUJNb .VfPpkd-jY41G-V67aGc, .WbUJNb:hover .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc, .WbUJNb:active .VfPpkd-jY41G-V67aGc, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-yrriRe-JZnCve-gmhCAd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-JZnCve-gmhCAd, .qTs5Xc, .bc5ALd .VfPpkd-HhDot-tJHJj, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc
+    {
+        color: text-secondary;
+    }
+    .onkcGd:hover, .onkcGd:focus, .WPhuJf:hover, .WPhuJf:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb, .z3vRcc-VGRwM, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xmYuEd, .vnnr5e.u3bW4e .I9OJHe.vTcY1d .snByac
+    {
+        /*I hate specifity*/
+        color: primary !important;
+    }
+    .EZrbnd, .asQXV, .rpo4wf-J3yWx, .wZTANe .J1raN, .A6dC2c-J3yWx, .z3vRcc-J3yWx, .z3vRcc, .tDxNLe .WOPwXe, .A6dC2c, .saYe1e, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .Evt7cb, .Evt7cb:visited, .nk37z, .geqPvd .VfPpkd-Rj7Y9b, .q6oraf .VfPpkd-StrnGf-rymPhb, .z80M1, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-fpDzbe-fmcmS, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-fpDzbe-fmcmS, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .Vx8Sxd, .Vx8Sxd:visited, .Vx8Sxd:hover, .Vx8Sxd:focus, .apFsO.onkcGd, .apFsO.onkcGd:visited, .Eajscb .vT1Gyc.N4XV7d, .B7SYid, .WOPwXe, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .z3vRcc, .tDxNLe, .zuzKle.xVPuB, .s8kOBc .VfPpkd-rymPhb-fpDzbe-fmcmS, .zuzKle.vnnr5e, .iph-dialog-title, .iph-dialog-content, .BYDJ6e:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-IhFlZd, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-f7MjDc, .ncFHed, .xSP5ic:not([disabled]), .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .YrFhrf, .tLai0e, .HZ3kWc, .jgvuAb, .MocG8c, .MocG8c.RDPZE, .vaUyHb, .feojCc, .cjq2Db, .i3bmcb, .xSP5ic:not([disabled]).yHy1rc, .UQuaGc, .e0prFf, .RU1zt.VnOHwf-Wvd9Cc.Fh209b, .RU1zt .VnOHwf-Wvd9Cc.Fh209b, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .WOPwXe-Wvd9Cc, .tLDEHd-Wvd9Cc, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-cTi5dd, .pO05gd, .s7bwNb, .bc5ALd .VfPpkd-XqMb-hFsbo, .bc5ALd .VfPpkd-XqMb-hFsbo.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .bc5ALd .VfPpkd-XqMb-hFsbo:not(.VfPpkd-ksKsZd-mWPk3d):focus, .bc5ALd .VfPpkd-XqMb-hFsbo:hover, .bc5ALd .VfPpkd-XqMb-hFsbo:not(:disabled):active, .r6B9Fd .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .xBIR3c .snByac
+    {
+        color: text-primary;
+    }
+    .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-b9t22c, .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-fpDzbe-fmcmS, .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-L8ivfd-fmcmS, .kCyxtd.RDPZE .j1BhHb, .bc5ALd .VfPpkd-XqMb-hFsbo-OWXEXe-FGU2Pb-OWB6Me
+    {
+        color: text-tertiary;
+        opacity: 1;
+    }
+    .ncFHed, .ybOdnf .OA0qNb
+    {
+        margin-top: 52px;
+    }
+    .wZTANe .J1raN:hover, .LjDxcd:hover:not(:disabled), .LjDxcd.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .LjDxcd:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .LjDxcd:active:not(:disabled), .WmnPA:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xlHPle .VfPpkd-fmcmS-yrriRe:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe.vTcY1d .snByac, .EN2Rfc:not(.RDPZE) .XTO5bf:hover, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL,
+    {
+        color: text-hover;
+    }
+    .DC55n td, .IzVHde, .ybOdnf.iWO5td, .jgvuAb, , .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .wsBckd, .Qs1TLd, .eSRRRc .kKn9Nc::before
+    {
+        background-color: bg-secondary;
+    }
+    .LXctle:enabled .VfPpkd-l6JLsf::after, .LXctle:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe):not(:active) .VfPpkd-l6JLsf::after, .LXctle:enabled:active .VfPpkd-l6JLsf::before, .LXctle:enabled:active .VfPpkd-l6JLsf::after, .LXctle:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:active) .VfPpkd-l6JLsf::after
+    {
+        background-color: bg-secondary;
+        border: 1px solid border-primary;
+    }
+    .qk0lee.QRiHXd .d4Fe0d, .d4Fe0d, .Aopndd, .ZNE4y, .RIDjNe, .MHxtic.QRiHXd
+    {
+        background-color: bg-secondary;
+        border-color: transparent;
+    }
+    .MHxtic
+    {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .VkhHKd, .Niache, .M4LFnf, .MocG8c
+    {
+        border-color: border-primary;
+    }
+    .PeGHgb:not(.Q8U8uc) .Ono85c + .oh9CFb, .PeGHgb:not(.Q8U8uc) .ruTJle + .fETHd
+    {
+        background-color: bg-tertiary;
+        border-top: 0;
+    }
+    .s2g3Xd
+    {
+        border-top: 0
+    }
+    .GWZ7yf, .zE55kf, .uWetjb
+    {
+        box-shadow: none;
+        background-color: bg-secondary;
+    }
+    .MHxtic:hover, .Kjnxrf:hover, .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus
+    {
+        box-shadow: none;
+        outline: 1px solid border-2nd;
+    }
+    .ETRkCe
+    {
+        box-shadow: 0 0 50px bg-primary;
+    }
+    .AxPfNe
+    {
+        background-color: bg-primary;
+        opacity: 0.5;
+    }
+    .vnnr5e .I9OJHe, .vnnr5e .CIy9F, .fWf7qe .Yalane, .aSjeL.aSjeL td, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me), .V8apv, .WufxEd .ynt9Dc .VfPpkd-WLXbod, .WufxEd .ynt9Dc, .hVNH5c .K0NPx, .s8kOBc .VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me), .lbWVCe, .BYDJ6e:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .cLpBac
+    {
+        background-color: bg-secondary;
+    }
+    .fWf7qe:not(.RDPZE):hover .Yalane, .TisIWb .kKn9Nc:before, .z80M1.FwR7Pc, .Mupove .tUJKGd:not(.xp2dJ):focus-within.boxOzd, .Mupove .tUJKGd:not(.xp2dJ):focus-within.idtp4e, .Mupove .tUJKGd:not(.xp2dJ) :focus-within.boxOzd, .Mupove .tUJKGd:not(.xp2dJ) :focus-within.idtp4e, .Mupove .ZoT1D:focus-within.boxOzd, .Mupove .ZoT1D:focus-within.idtp4e, .Mupove .ZoT1D :focus-within.boxOzd, .Mupove .ZoT1D :focus-within.idtp4e, .hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus, .Iwp0Ue:not(.xp2dJ):focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ):focus-within.h7Ww0, .Iwp0Ue:not(.xp2dJ) :focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ) :focus-within.h7Ww0, .xWw7yd:focus-within.JiTjnd, .xWw7yd:focus-within.h7Ww0, .xWw7yd :focus-within.JiTjnd, .xWw7yd :focus-within.h7Ww0, .tfGBod.rZXyy:not(.xp2dJ):hover .jWCzBe
+    {
+        background-color: bg-hover;
+    }
+    .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe, .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .CIy9F,
+    {
+        background-color: bg-2nd-hover;
+    }
+    .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL
+    {
+        background-color: active-button;
+    }
+    .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc
+    {
+        color: #1967d2;
+    }
+    .ZoT1D:hover.idtp4e, .UISY8d-Ysl7Fe:hover, .P3W0Dd-Ysl7Fe:focus, .maXJsd:focus .P3W0Dd-Ysl7Fe, .maXJsd:focus .P3W0Dd-Ysl7Fe, .qk0lee:focus:after, .TJtJXb:hover td, .tYQn5c:hover td, .DC55n:hover td, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0, .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0
+    {
+        background-color: hover-thingy !important;
+    }
+    .Iwp0Ue:not(.xp2dJ):not(.rZXyy) .h7Ww0, .feojCc
+    {
+        background-color: bg-primary !important;
+    }
+    .z80M1.qs41qe > .aBBjbd
+    {
+        background-image: radial-gradient(circle farthest-side, #424242, #424242 80%, rgba(189, 189, 189, 0) 100%)
+    }
+    .svNSpd
+    {
+        color: text-primary;
+        background-color: bg-active;
+        border-color: transparent;
+    }
+    .Kjnxrf, .UQuaGc, .VfPpkd-LgbsSe-OWXEXe-MV7yeb.VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc, .iph-dialog.iph-dialog.iph-dialog button, .ksBjEc, .nCP5yc, .LjDxcd
+    {
+        border-radius: 100rem;
+        overflow: hidden;
+        height: 40px;
+        padding-inline: 24px;
+    }
+    .kCyAyd .l4V7wb, .l3F1ye .l4V7wb
+    {
+        padding-block: 2px;
+    }
+    .EXL71e
+    {
+        box-shadow: none;
+        border: 1px solid primary;
+        margin-top: -1px;
+        background-color: bg-tertiary;
+    }
+    .hja3X, .mN1ivc .VfPpkd-Bz112c-J1Ukfc-LhBDec, .mN1ivc .VfPpkd-Bz112c-J1Ukfc-LhBDec::after, .McVlQd::after, .ycJpzc::after, .czCkDc, .ECK80e
+    {
+        border-color: transparent;
+    }
+    .QV10Af, .HyS0Qd .n9IS1, .HyS0Qd:not(.RDPZE):hover .n9IS1, .TIKlJe .hqBSCb .VfPpkd-TkwUic
+    {
+        background-color: transparent;
+        border-color: border-2nd;
+    }
+    .bFjUmb-Ysl7Fe, .bFjUmb-Ysl7Fe, .CNpREd.bFjUmb-Ysl7Fe, .CNpREd .bFjUmb-Ysl7Fe, .lRaOFf[aria-selected=true]
+    {
+        background-color: bg-active !important;
+    }
+    .Xi8cpb[aria-selected="true"] .asQXV.YVvGBb, .Xi8cpb[aria-selected="true"] .YVvGBb, .Xi8cpb[aria-selected="true"] .NMm5M
+    {
+        color: !important;
+    }
+    .LlcfK
+    {
+        border-radius: 2rem;
+    }
+    .Du1LZe .Xi8cpb, .Du1LZe .qr5cDe
+    {
+        padding-inline: 0.5rem;
+    }
+    .OX4Vcb
+    {
+        padding-inline: 0.5rem;
+    }
+    .Du1LZe .LlcfK
+    {
+        right: 0;
+    }
+    .kXvNXe, .CsoGbf
+    {
+        margin-left: 0.5rem;
+    }
+    .I7OXgf, .iph-dialog.iph-dialog, .y2d25, .picker-dialog.XKSfm-Sx9Kwc
+    {
+        box-shadow: 0 0 20px bg-primary;
+        padding: 24px;
+        border-radius: 28px;
+        background-color: bg-tertiary;
+    }
+    .Shk6y, .UYUfn, .OE6hId, .TQX6ub:not(:empty), .ECK80e, .DTnYMd
+    {
+        margin: 1rem 0;
+        padding: 0;
+    }
+    .TQX6ub:not(:empty)
+    {
+        margin-bottom: 1rem;
+    }
+    .GQLaCd:not(:empty), .fyExH, .Kjnxrf:not(:disabled), .UQuaGc
+    {
+        background-color: transparent;
+        outline: 1px solid border-primary;
+    }
+    .hgjBDc
+    {
+        background-color: transparent;
+    }
+    .gJk24c, .hN1OOc.eumXzf, .Eajscb .nGZbac.F262Ye, .ksBjEc:not(:disabled), .Kjnxrf:not(:disabled), .Kjnxrf:hover:not(:disabled), .Kjnxrf.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .Kjnxrf:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .Kjnxrf:active:not(:disabled), .r6OEKd .ksBjEc:not(:hover):not(:focus):not(:active):not(:disabled), .poFWNe:not([disabled]):focus ~ .qTs5Xc, .WbUJNb:hover.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:active.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc
+    {
+        color: primary;
+    }
+    .Eajscb .vT1Gyc.F262Ye, .l3F1ye:not(.UQuaGc.RDPZE), .l3F1ye .TpQm9d, .iph-dialog.iph-dialog.iph-dialog button, .iph-dialog button:first-of-type:focus, .iph-dialog button.focus:first-of-type, .iph-dialog button:first-of-type:focus:hover, .iph-dialog button.focus:first-of-type:hover, .iph-dialog button:first-of-type:hover, .ncFHed .MocG8c.KKjvXb, .ybOdnf .OA0qNb .LMgvRb[aria-selected=true], .ybOdnf .OA0qNb .LMgvRb[aria-selected=true]:hover, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:active) .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe):not(:active) .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:active .VfPpkd-uMhiad::after, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled), .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):focus:active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):hover, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus
+    {
+        background-color: primary;
+        color: on-primary;
+    }
+    .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd .VfPpkd-pafCAf
+    {
+        color: on-primary;
+    }
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe, .hN1OOc.eumXzf::after, .McVlQd, body .VfPpkd-StrnGf-rymPhb-ibnC6b:focus-visible .VfPpkd-StrnGf-rymPhb-Zmlebc-LhBDec, body .VfPpkd-rymPhb-ibnC6b:focus-visible .VfPpkd-rymPhb-Zmlebc-LhBDec, .LQeN7 .VfPpkd-J1Ukfc-LhBDec, .iph-spotlight-border, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .ycJpzc, .WbUJNb:hover .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:active .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .rvBHac .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .uWlRce, .GFoASc, .rHV3jf, .WpeOqd
+    {
+        border-radius: inherit;
+        border-color: primary;
+    }
+    .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):hover, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):focus:active
+    {
+        border-color: primary;
+    }
+    .Po14Kd
+    {
+        background-color: bg-secondary;
+    }
+    .BWOvob, .vnnr5e:not(.RDPZE).u3bW4e .mIZh1c, .lfaV6e, .cWL65e, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-Qsb3yd::before, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-Qsb3yd::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe) .VfPpkd-Qsb3yd::before, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe) .VfPpkd-Qsb3yd::after
+    {
+        background-color: primary;
+    }
+    .uNeeU, .W9wDc.IYewr .poFWNe:not([disabled]):focus ~ .qTs5Xc, .W9wDc.IYewr .n9IS1 .qTs5Xc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc
+    {
+        color: error;
+    }
+    .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe
+    {
+        border-color: error;
+    }
+    .W9wDc.IYewr .AKIybd, .W9wDc.IYewr .cWL65e
+    {
+        background-color: error;
+    }
+    .RcHwO
+    {
+        border-bottom: .0625rem solid border-primary;
+    }
+    .VfPpkd-xl07Ob-XxIAqe, .ncFHed, .ybOdnf .OA0qNb
+    {
+        border-radius: 16px;
+        padding-block: 4px;
+    }
+    .EY8ABd .VfPpkd-z59Tgd
+    {
+        background-color: text-primary;
+        color: bg-primary;
+    }
+    /* :( part */
+    .SZ0kZe
+    {
+        border-color: transparent;
+        background-color: navbar;
+    }
+    *
+    {
+        caret-color: primary !important;
+    }
+    .Xi8cpb:hover .LlcfK, .qr5cDe:hover .LlcfK,
+    {
+        outline: 1px solid border-2nd;
+    }
+    .VfPpkd-xl07Ob-XxIAqe, .ncFHed, .ybOdnf .OA0qNb
+    {
+        background-color: bg-tertiary;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+    }
+    .ZizeYd.qm64Ve
+    {
+        background: linear-gradient(60deg, rgba(128, 128, 128, 0) 60%, rgba(32, 33, 36, .88));
+        opacity: .88;
+    }
+    .Xi8cpb:focus:not(:active) .LlcfK, .qr5cDe:focus:not(:active) .LlcfK
+    {
+        border: 3px solid primary;
+    }
+    .vzcr8
+    {
+        color: #a1ffa1;
+    }
+    .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-t08AT-Bz112c, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-t08AT-Bz112c, .xSP5ic:not([disabled]), .xSP5ic:not([disabled]).yHy1rc, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled .VfPpkd-pafCAf
+    {
+        fill: currentColor;
+    }
+    .FAVvUd .nIu6nb, .iph-dialog-dismiss
+    {
+        filter: invert(1);
+    }
+    .u73Apc:not(.lXuxY .u73Apc)
+    {
+        border-bottom: none;
+    }
+    .VfoFfe // Class code popout box
+    {
+        border-top: none;
+    }
+    .qj5L0, .bNkTzb
+    {
+        border-color: border-2nd;
+    }
+    .lbWVCe .h0pqq
+    {
+        background-color: #222
+    }
+    .N6nSod
+    {
+        background: none;
+    }
+    .JPgtMb
+    {
+        border-color: text-primary;
+    }
+    .N6nSod:hover, .gb_Kc .gb_hd.gb_id button:hover svg, .gb_hd button:hover svg, .gb_A:hover, .gb_Kc .gb_hd.gb_id button:focus svg, .gb_Kc .gb_hd.gb_id button:focus:hover svg, .gb_hd button:focus svg, .gb_hd button:focus:hover svg, .gb_A:focus, .gb_A:focus:hover
+    {
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+}
+.VfPpkd-XqMb-S2QgGf-kj0dLd:disabled .VfPpkd-kBDsod
+{
+    visibility: visible;
+}
+.LjDxcd
+{
+    border-style: solid;
+    border-width: 1px;
+}
+.VfPpkd-StrnGf-rymPhb-f7MjDc
+{
+    margin-right: 16px;
+}
+.r6OEKd .ksBjEc, .r6OEKd .nCP5yc
+{
+    margin-right: 0;
+}
+.AWfQId .w1v75b, .AWfQId .rxO3db
+{
+    margin-bottom: 0;
+}
+.AWfQId
+{
+    padding: 0;
+}
+.VfPpkd-LgbsSe
+{
+    margin-block: 0;
+}
+.VfPpkd-StrnGf-rymPhb-f7MjDc > span
+{
+    height: 24px;
+}
+.zE55kf
+{
+    padding: 1rem 1.5rem;
+}
+.OmA97e
+{
+    background-image: -webkit-repeating-linear-gradient(-135deg, transparent, transparent .5625rem, rgba(255, 255, 255, .3) .5625rem, rgba(255, 255, 255, .3) .625rem);
+    background-image: repeating-linear-gradient(-135deg, transparent, transparent .5625rem, rgba(255, 255, 255, .3) .5625rem, rgba(255, 255, 255, .3) .625rem);
+    background-size: .8838834765rem .8838834765rem;
+    bottom: -50%;
+    left: -50%;
+    pointer-events: none;
+    position: absolute;
+    right: -50%;
+    top: -50%;
+    transform: rotateZ(15deg);
+}
+.uWetjb
+{
+    margin: 0;
+    padding: 2rem;
+}
+.czCkDc
+{
+    margin: 0;
+}
+.Sl8ssb, .XZDC9d
+{
+    margin-bottom: 1rem;
+}
+.VfPpkd-fmcmS-yrriRe
+{
+    padding: 0 16px;
+}
+.VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-clz4Ic
+{
+    margin: 4px 0;
+    border-color: border-2nd;
+}
+.VfPpkd-XqMb-JNdkSc
+{
+    align-items: center;
+}
+.VfPpkd-Cv7pCf
+{
+    width: fit-content;
+}
+.VfPpkd-RKhZBe-LgbsSe
+{
+    width: 50px;
+    height: auto;
+    padding: 6px 12px;
+    margin: 2px 0;
+}
+.VfPpkd-HhDot-tJHJj
+{
+    height: 32px;
+    line-height: 32px;
+}
+.LZqXdf
+{
+    padding: 0;
+}
+.zOtZye
+{
+    padding: 0.5rem 1rem;
+}
+.picker-dialog.XKSfm-Sx9Kwc iframe
+{
+    border-radius: 12px;
+}
