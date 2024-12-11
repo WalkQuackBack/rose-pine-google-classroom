@@ -2,7 +2,7 @@
 @name           Google Classroom Rose Pine
 @namespace      rosepinegoogleclassrom
 @description    Rose Pine theme for Google Classroom, code based off of https://cdn.jsdelivr.net/gh/uso-archive/data@09bf0fd79f67192c2975ba68052a7409f435e6dc/data/styles/179514.json.
-@version        0.1.0
+@version        0.1.1
 @homepageURL	https://github.com/WalkQuackBack/rose-pine-google-classroom
 @supportURL		https://github.com/WalkQuackBack/rose-pine-google-classroom/issues
 @license		MIT
@@ -176,7 +176,7 @@
     {
         color: text-secondary;
     }
-    .onkcGd:hover, .onkcGd:focus, .WPhuJf:hover, .WPhuJf:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb, .z3vRcc-VGRwM, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xmYuEd, .vnnr5e.u3bW4e .I9OJHe.vTcY1d .snByac
+    .onkcGd:hover, .onkcGd:focus, .WPhuJf:hover, .WPhuJf:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb, .z3vRcc-VGRwM, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xmYuEd, .vnnr5e.u3bW4e .I9OJHe.vTcY1d .snByac, .CbuVcc:focus .Pce5Kb, .CbuVcc:hover .Pce5Kb
     {
         /*I hate specifity*/
         color: primary !important;
