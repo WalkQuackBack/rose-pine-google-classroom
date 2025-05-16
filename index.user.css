@@ -437,8 +437,7 @@
             padding-right: 1.5rem;
         }
     }
-}
-.VfPpkd-XqMb-S2QgGf-kj0dLd:disabled .VfPpkd-kBDsod
+    .VfPpkd-XqMb-S2QgGf-kj0dLd:disabled .VfPpkd-kBDsod
 {
     visibility: visible;
 }
@@ -552,7 +551,9 @@
 /*   Hack   */
         filter: invert(1) hue-rotate(180deg);
 }
+}
 
+/*
 @-moz-document url-prefix("https://drive.google.com/picker") {
     body {
         background-color: rosepine-overlay;
@@ -802,8 +803,8 @@
     .xJafod {
         opacity: 1;
     }
-}
-
+}*/
+/*
 @-moz-document regexp("^https://ogs.google.com/.*") {
     body, .LzIwWe {
         color: rosepine-text;
@@ -840,9 +841,9 @@
     .coHE2:active, .coHE2:active:focus-visible {
         background-color: alpha(rosepine-iris, .12)
     }
-}
+} */
 
-@-moz-document url-prefix('https://classroom.google.com'), url-prefix("https://drive.google.com/picker"), domain("") {
+@-moz-document url-prefix('https://classroom.google.com') {
     body
     {
         color-scheme: dark;
