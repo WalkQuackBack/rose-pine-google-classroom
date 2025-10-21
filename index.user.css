@@ -1,12 +1,13 @@
 /* ==UserStyle==
-@name           Google Classroom Rose Pine
+@name           Google Classroom Rose Pine (LEGACY)
 @namespace      rosepinegoogleclassrom
-@description    Rose Pine theme for Google Classroom, code based off of https://cdn.jsdelivr.net/gh/uso-archive/data@09bf0fd79f67192c2975ba68052a7409f435e6dc/data/styles/179514.json.
-@version        0.3.0
+@description    Move to https://github.com/WalkQuackBack/rose-pine-google-classroom/blob/main/index.user.less
+@version        0.4.0
+@updateURL      https://github.com/WalkQuackBack/rose-pine-google-classroom/raw/refs/heads/main/index.user.less
 @homepageURL	https://github.com/WalkQuackBack/rose-pine-google-classroom
 @supportURL		https://github.com/WalkQuackBack/rose-pine-google-classroom/issues
 @license		MIT
-@preprocessor   stylus
+@preprocessor   less
 
 @var color      rosepine-base            "Base"              hsl(249deg, 22%, 12%)
 @var color      rosepine-surface         "Surface"           hsl(247deg, 23%, 15%)
@@ -32,26 +33,26 @@
 @-moz-document domain("classroom.google.com")
 {
     body {
-        background-color: rosepine-base;
-        color: rosepine-text;
-        caret-color: rosepine-iris;
+        background-color: @rosepine-base;
+        color: @rosepine-text;
+        caret-color: @rosepine-iris;
         scrollbar-width: none;
     }
     ::selection
     {
-        background-color: alpha(rosepine-iris, 0.25);
+        background-color: alpha(@rosepine-iris, 0.25);
     }
     .I7OXgf, .TdC1bb, .bc5ALd .VfPpkd-hOoMI-haAclf
     {
-        background-color: rosepine-base;
+        background-color: @rosepine-base;
     }
     .mwJvDe .KEDCCd, .Tabkde, .Tabkde .OX4Vcb, .ETRkCe, .lXuxY .u73Apc,
 /*     Sidebar */
     .yWU57c.AjWMy .rknsod,
     .yWU57c.AjWMy
     {
-        background-color: rosepine-surface;
-        border-color: rosepine-highlightMed;
+        background-color: @rosepine-surface;
+        border-color: @rosepine-highlightMed;
     }
     .OX4Vcb
     {
@@ -60,12 +61,12 @@
     }
     .joJglb
     {
-        background-color: rosepine-surface;
-        border-color: rosepine-surface;
+        background-color: @rosepine-surface;
+        border-color: @rosepine-surface;
     }
     .Xi8cpb:active .p1KYTc, .qr5cDe:active .p1KYTc
     {
-        background-color: rosepine-iris;
+        background-color: @rosepine-iris;
         opacity: 0.06;
     }
     .Aopndd, .GWZ7yf, .d4Fe0d, .qk0lee, .MHxtic, .zE55kf, .uWetjb, .PeGHgb:not(.Q8U8uc) .Ono85c + .oh9CFb, .PeGHgb:not(.Q8U8uc) .ruTJle + .fETHd, .hN1OOc.eumXzf::after
@@ -82,32 +83,32 @@
     }
     .WMQb5e .oBSRLe, .s2g3Xd, .q1Kmyc, .SZ0kZe, .gKkZCe, .E5f6Vd, .svNSpd, .Rj2Mlf:not(:disabled), .LjDxcd:not(:disabled), .ar1wE .eqqrO, .ySjuvd .eqqrO, .AeAAkf, .DC55n td, .a4YS1c, .hYt5f.FRDm8d .WkZsyc:not(:last-child), .hYt5f.FRDm8d .Kql9ed:not(:last-child), .geqPvd .VfPpkd-WLXbod, .geqPvd, .tUJKGd:not(:first-child), .d6CWTd, .ycbm1d, .LDr2ne, .O9YpHb, .Iwp0Ue:not(:first-child), .i3bmcb, .yHjGtf, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .pvb7Pc, .t5tYqf .cmTiyd, .cmTiyd, .feojCc, .bc5ALd.VfPpkd-Zc28rc-OWXEXe-Mgvhmd-S2QgGf-FNFY6c .VfPpkd-hOoMI-haAclf, .bc5ALd.VfPpkd-Zc28rc-OWXEXe-WRCQcd-S2QgGf-FNFY6c .VfPpkd-hOoMI-haAclf, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe
     {
-        border-color: rosepine-highlightHigh;
+        border-color: @rosepine-highlightHigh;
     }
     .xVPuB .mIZh1c, .vnnr5e .mIZh1c, .oQ5Hqe, .VfPpkd-rymPhb-clz4Ic
     {
-        background-color: rosepine-highlightMed;
+        background-color: @rosepine-highlightMed;
     }
     .MHxtic:not(:last-child), .LKqFXc, .Rj2Mlf:not(:disabled):hover, .uO32ac, .ypv4re, .nl5VRd, .VKRoqe, .gpeXDe, .meyvr, .Lp3y7d, .LqHDgc, .qj5L0, .bNkTzb, .vjb26b, .Usd1Ac, .XV0XSd .GtrNOb, .TNg8Ce, .dmVQc
     {
-        border-color: rosepine-highlightMed;
+        border-color: @rosepine-highlightMed;
     }
     .dDKhVc-Wvd9Cc, .dDKhVc, .WdYux, .tLDEHd, .DPvwYc, .Erb9le:not(.RDPZE) .qmMNRc:hover, .Erb9le:not(.RDPZE) .qmMNRc.y7OZL, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .FUvKMe, .cSyPgb, .lziZub, .lziZub:visited, .onkcGd, .onkcGd:visited, .WPhuJf, .WPhuJf:visited, .OGhwGf, .OGhwGf:visited, .iLjzDc, .K6Ovqd, .sdDCme, .oBSRLe, .IMvYId, .xVPuB .snByac, .vnnr5e .snByac .IMvYId:visited, .LjDxcd:not(:disabled), .asQXV-FGzYL, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .gb_Ea svg, .gb_Oc svg, .gb_rd .gb_sd, .gb_1c .gb_sd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xVPuB .snByac, .vnnr5e .snByac, .UQuaGc.RDPZE, .ubqkMe .kByKEb, .RyF19b .kByKEb, .J2ZeGc .kByKEb, .svdjhb .kByKEb, .WbUJNb .VfPpkd-jY41G-V67aGc, .WbUJNb:hover .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc, .WbUJNb:active .VfPpkd-jY41G-V67aGc, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-yrriRe-JZnCve-gmhCAd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-JZnCve-gmhCAd, .qTs5Xc, .bc5ALd .VfPpkd-HhDot-tJHJj, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .Y6Wfvc, .zwrAMe, .Eajscb .vT1Gyc.pCcXPe, .Eajscb .nGZbac, .Eajscb .nGZbac.pCcXPe, .Eajscb .nGZbac.N4XV7d
     {
-        color: rosepine-subtle;
+        color: @rosepine-subtle;
     }
     .onkcGd:hover, .onkcGd:focus, .WPhuJf:hover, .WPhuJf:focus, .etFl5b, .etFl5b:visited, .etFl5b:hover, .etFl5b:focus, .UtdKPb:hover, .UtdKPb:focus, .yixX5e:hover .UtdKPb, .yixX5e:focus .UtdKPb, .z3vRcc-VGRwM, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xmYuEd, .vnnr5e.u3bW4e .I9OJHe.vTcY1d .snByac, .CbuVcc:focus .Pce5Kb, .CbuVcc:hover .Pce5Kb
     {
         /*I hate specifity*/
-        color: rosepine-iris !important;
+        color: @rosepine-iris !important;
     }
     .EZrbnd, .asQXV, .rpo4wf-J3yWx, .wZTANe .J1raN, .A6dC2c-J3yWx, .z3vRcc-J3yWx, .z3vRcc, .tDxNLe .WOPwXe, .A6dC2c, .saYe1e, .cfWmIb:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .Evt7cb, .Evt7cb:visited, .nk37z, .geqPvd .VfPpkd-Rj7Y9b, .q6oraf .VfPpkd-StrnGf-rymPhb, .z80M1, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-fpDzbe-fmcmS, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-fpDzbe-fmcmS, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .s8kOBc .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .Vx8Sxd, .Vx8Sxd:visited, .Vx8Sxd:hover, .Vx8Sxd:focus, .apFsO.onkcGd, .apFsO.onkcGd:visited, .Eajscb .vT1Gyc.N4XV7d, .B7SYid, .WOPwXe, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .z3vRcc, .tDxNLe, .zuzKle.xVPuB, .s8kOBc .VfPpkd-rymPhb-fpDzbe-fmcmS, .zuzKle.vnnr5e, .iph-dialog-title, .iph-dialog-content, .BYDJ6e:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-uusGie-fmcmS, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-IhFlZd, .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-f7MjDc, .ncFHed, .xSP5ic:not([disabled]), .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .YrFhrf, .tLai0e, .HZ3kWc, .jgvuAb, .MocG8c, .MocG8c.RDPZE, .vaUyHb, .feojCc, .cjq2Db, .i3bmcb, .xSP5ic:not([disabled]).yHy1rc, .UQuaGc, .e0prFf, .RU1zt.VnOHwf-Wvd9Cc.Fh209b, .RU1zt .VnOHwf-Wvd9Cc.Fh209b, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-fmcmS-wGMbrd, .WOPwXe-Wvd9Cc, .tLDEHd-Wvd9Cc, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-cTi5dd, .pO05gd, .s7bwNb, .bc5ALd .VfPpkd-XqMb-hFsbo, .bc5ALd .VfPpkd-XqMb-hFsbo.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .bc5ALd .VfPpkd-XqMb-hFsbo:not(.VfPpkd-ksKsZd-mWPk3d):focus, .bc5ALd .VfPpkd-XqMb-hFsbo:hover, .bc5ALd .VfPpkd-XqMb-hFsbo:not(:disabled):active, .r6B9Fd .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-Gtdoyb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b .VfPpkd-rymPhb-fpDzbe-fmcmS, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .r6B9Fd .VfPpkd-rymPhb-ibnC6b-OWXEXe-pXU01b.VfPpkd-rymPhb-ibnC6b-OWXEXe-SfQLQb-M1Soyc-Bz112c .VfPpkd-rymPhb-KkROqb, .xBIR3c .snByac, .cC1eCc .VfPpkd-k2Wrsb, .ViCi4, .cC1eCc .VfPpkd-cnG4Wd, .yPtghd, .cC1eCc .VfPpkd-zMU9ub, .aHMLCc, .M3YUzf, .wZTANe .J1raN:hover, .LjDxcd:hover:not(:disabled), .LjDxcd.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .LjDxcd:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .LjDxcd:active:not(:disabled), .WmnPA:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .xlHPle .VfPpkd-fmcmS-yrriRe:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe.vTcY1d .snByac, .EN2Rfc:not(.RDPZE) .XTO5bf:hover, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL, .IzVHde em
     {
-        color: rosepine-text;
+        color: @rosepine-text;
     }
     .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-b9t22c, .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-fpDzbe-fmcmS, .q6oraf .VfPpkd-StrnGf-rymPhb .VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-OWB6Me .VfPpkd-StrnGf-rymPhb-L8ivfd-fmcmS, .kCyxtd.RDPZE .j1BhHb, .bc5ALd .VfPpkd-XqMb-hFsbo-OWXEXe-FGU2Pb-OWB6Me
     {
-        color: rosepine-muted;
+        color: @rosepine-muted;
         opacity: 1;
     }
     .ncFHed, .ybOdnf .OA0qNb
@@ -116,16 +117,16 @@
     }
     .DC55n td, .IzVHde, .ybOdnf.iWO5td, .jgvuAb, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .wsBckd, .Qs1TLd, .eSRRRc .kKn9Nc::before, .Usd1Ac, .rxb0oe .VfPpkd-qNpTzb-ajuXxc-ZMv3u, .Po14Kd
     {
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
     }
     .LXctle:enabled .VfPpkd-l6JLsf::after, .LXctle:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe):not(:active) .VfPpkd-l6JLsf::after, .LXctle:enabled:active .VfPpkd-l6JLsf::before, .LXctle:enabled:active .VfPpkd-l6JLsf::after, .LXctle:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:active) .VfPpkd-l6JLsf::after
     {
-        background-color: rosepine-surface;
-        border: 1px solid rosepine-highlightHigh;
+        background-color: @rosepine-surface;
+        border: 1px solid @rosepine-highlightHigh;
     }
     .qk0lee.QRiHXd .d4Fe0d, .d4Fe0d, .Aopndd, .ZNE4y, .RIDjNe, .MHxtic.QRiHXd
     {
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
         border-color: transparent;
     }
     .MHxtic
@@ -135,11 +136,11 @@
     }
     .VkhHKd, .Niache, .M4LFnf, .MocG8c
     {
-        border-color: rosepine-highlightHigh;
+        border-color: @rosepine-highlightHigh;
     }
     .PeGHgb:not(.Q8U8uc) .Ono85c + .oh9CFb, .PeGHgb:not(.Q8U8uc) .ruTJle + .fETHd, .lGIiYb
     {
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
         border-block: 0;
     }
     .s2g3Xd
@@ -149,33 +150,33 @@
     .GWZ7yf, .zE55kf, .uWetjb
     {
         box-shadow: none;
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
     }
     .MHxtic:hover, .Kjnxrf:hover, .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus
     {
         box-shadow: none;
-        outline: 1px solid rosepine-highlightMed;
+        outline: 1px solid @rosepine-highlightMed;
     }
     .ETRkCe
     {
-        box-shadow: 0 0 50px rosepine-base;
+        box-shadow: 0 0 50px @rosepine-base;
     }
     .AxPfNe
     {
-        background-color: rosepine-base;
+        background-color: @rosepine-base;
         opacity: 0.5;
     }
     .vnnr5e .I9OJHe, .vnnr5e .CIy9F, .fWf7qe .Yalane, .aSjeL.aSjeL td, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me), .V8apv, .WufxEd .ynt9Dc .VfPpkd-WLXbod, .WufxEd .ynt9Dc, .hVNH5c .K0NPx, .s8kOBc .VfPpkd-rymPhb-ibnC6b.VfPpkd-rymPhb-ibnC6b-OWXEXe-gk6SMd, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me), .lbWVCe, .BYDJ6e:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-TkwUic, .cLpBac
     {
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
     }
     .fWf7qe:not(.RDPZE):hover .Yalane, .TisIWb .kKn9Nc:before, .z80M1.FwR7Pc, .Mupove .tUJKGd:not(.xp2dJ):focus-within.boxOzd, .Mupove .tUJKGd:not(.xp2dJ):focus-within.idtp4e, .Mupove .tUJKGd:not(.xp2dJ) :focus-within.boxOzd, .Mupove .tUJKGd:not(.xp2dJ) :focus-within.idtp4e, .Mupove .ZoT1D:focus-within.boxOzd, .Mupove .ZoT1D:focus-within.idtp4e, .Mupove .ZoT1D :focus-within.boxOzd, .Mupove .ZoT1D :focus-within.idtp4e, .hN1OOc.eumXzf:hover, .hN1OOc.eumXzf:focus, .Iwp0Ue:not(.xp2dJ):focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ):focus-within.h7Ww0, .Iwp0Ue:not(.xp2dJ) :focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ) :focus-within.h7Ww0, .xWw7yd:focus-within.JiTjnd, .xWw7yd:focus-within.h7Ww0, .xWw7yd :focus-within.JiTjnd, .xWw7yd :focus-within.h7Ww0, .tfGBod.rZXyy:not(.xp2dJ):hover .jWCzBe
     {
-        background-color: rosepine-base;
+        background-color: @rosepine-base;
     }
     .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .I9OJHe, .vnnr5e:not(.RDPZE):not(.u3bW4e):hover .CIy9F
     {
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
     }
     .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc
     {
@@ -183,11 +184,11 @@
     }
     .ZoT1D:hover.idtp4e, .UISY8d-Ysl7Fe:hover, .P3W0Dd-Ysl7Fe:focus, .maXJsd:focus .P3W0Dd-Ysl7Fe, .maXJsd:focus .P3W0Dd-Ysl7Fe, .qk0lee:focus:after, .TJtJXb:hover td, .tYQn5c:hover td, .DC55n:hover td, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0, .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0, .EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL
     {
-        background-color: rosepine-overlay !important;
+        background-color: @rosepine-overlay !important;
     }
     .Iwp0Ue:not(.xp2dJ):not(.rZXyy) .h7Ww0, .feojCc
     {
-        background-color: rosepine-base !important;
+        background-color: @rosepine-base !important;
     }
     .z80M1.qs41qe > .aBBjbd
     {
@@ -195,8 +196,8 @@
     }
     .svNSpd
     {
-        color: rosepine-text;
-        background-color: rosepine-surface;
+        color: @rosepine-text;
+        background-color: @rosepine-surface;
         border-color: transparent;
     }
     .Kjnxrf, .UQuaGc, .VfPpkd-LgbsSe-OWXEXe-MV7yeb.VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc, .iph-dialog.iph-dialog.iph-dialog button, .ksBjEc, .nCP5yc, .LjDxcd
@@ -213,9 +214,9 @@
     .EXL71e
     {
         box-shadow: none;
-        border: 1px solid rosepine-iris;
+        border: 1px solid @rosepine-iris;
         margin-top: -1px;
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
     }
     .hja3X, .mN1ivc .VfPpkd-Bz112c-J1Ukfc-LhBDec, .mN1ivc .VfPpkd-Bz112c-J1Ukfc-LhBDec::after, .McVlQd::after, .ycJpzc::after, .czCkDc, .ECK80e
     {
@@ -224,11 +225,11 @@
     .QV10Af, .HyS0Qd .n9IS1, .HyS0Qd:not(.RDPZE):hover .n9IS1, .TIKlJe .hqBSCb .VfPpkd-TkwUic
     {
         background-color: transparent;
-        border-color: rosepine-highlightMed;
+        border-color: @rosepine-highlightMed;
     }
     .bFjUmb-Ysl7Fe, .bFjUmb-Ysl7Fe, .CNpREd.bFjUmb-Ysl7Fe, .CNpREd .bFjUmb-Ysl7Fe, .lRaOFf[aria-selected=true], .Xi8cpb[aria-selected="true"] .asQXV.YVvGBb, .Xi8cpb[aria-selected="true"] .YVvGBb, .Xi8cpb[aria-selected="true"] .NMm5M
     {
-        background-color: rosepine-overlay !important;
+        background-color: @rosepine-overlay !important;
     }
     .LlcfK
     {
@@ -252,10 +253,10 @@
     }
     .I7OXgf, .iph-dialog.iph-dialog, .y2d25, .picker-dialog.XKSfm-Sx9Kwc, .cC1eCc .VfPpkd-P5QLlc, .yb5d6c
     {
-        box-shadow: 0 0 20px rosepine-base;
+        box-shadow: 0 0 20px @rosepine-base;
         padding: 24px;
         border-radius: 28px;
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
     }
     .Shk6y, .UYUfn, .OE6hId, .TQX6ub:not(:empty), .ECK80e, .DTnYMd
     {
@@ -269,7 +270,7 @@
     .GQLaCd:not(:empty), .fyExH, .Kjnxrf:not(:disabled), .UQuaGc
     {
         background-color: transparent;
-        outline: 1px solid rosepine-highlightHigh;
+        outline: 1px solid @rosepine-highlightHigh;
     }
     .hgjBDc
     {
@@ -277,49 +278,49 @@
     }
     .gJk24c, .hN1OOc.eumXzf, .Eajscb .nGZbac.F262Ye, .ksBjEc:not(:disabled), .Kjnxrf:not(:disabled), .Kjnxrf:hover:not(:disabled), .Kjnxrf.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:disabled), .Kjnxrf:not(.VfPpkd-ksKsZd-mWPk3d):focus:not(:disabled), .Kjnxrf:active:not(:disabled), .r6OEKd .ksBjEc:not(:hover):not(:focus):not(:active):not(:disabled), .poFWNe:not([disabled]):focus ~ .qTs5Xc, .WbUJNb:hover.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:active.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .dmVQc
     {
-        color: rosepine-iris;
+        color: @rosepine-iris;
     }
     .Eajscb .vT1Gyc.F262Ye, .l3F1ye:not(.UQuaGc.RDPZE), .l3F1ye .TpQm9d, .iph-dialog.iph-dialog.iph-dialog button, .iph-dialog button:first-of-type:focus, .iph-dialog button.focus:first-of-type, .iph-dialog button:first-of-type:focus:hover, .iph-dialog button.focus:first-of-type:hover, .iph-dialog button:first-of-type:hover, .ncFHed .MocG8c.KKjvXb, .ybOdnf .OA0qNb .LMgvRb[aria-selected=true], .ybOdnf .OA0qNb .LMgvRb[aria-selected=true]:hover, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe:not(:active) .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe):not(:active) .VfPpkd-uMhiad::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:active .VfPpkd-uMhiad::after, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled), .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):focus:active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):hover, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled).VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-gk6SMd:not(:disabled):not(.VfPpkd-ksKsZd-mWPk3d):focus
     {
-        background-color: rosepine-iris;
-        color: rosepine-overlay;
+        background-color: @rosepine-iris;
+        color: @rosepine-overlay;
     }
     .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd .VfPpkd-pafCAf
     {
-        color: rosepine-overlay;
+        color: @rosepine-overlay;
     }
     .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .ReCbLb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me).VfPpkd-O1htCb-OWXEXe-XpnDCe .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe, .McVlQd, body .VfPpkd-StrnGf-rymPhb-ibnC6b:focus-visible .VfPpkd-StrnGf-rymPhb-Zmlebc-LhBDec, body .VfPpkd-rymPhb-ibnC6b:focus-visible .VfPpkd-rymPhb-Zmlebc-LhBDec, .LQeN7 .VfPpkd-J1Ukfc-LhBDec, .iph-spotlight-border, .hqBSCb:not(.VfPpkd-O1htCb-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .xlHPle .VfPpkd-fmcmS-yrriRe:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .WmnPA:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::after, .ycJpzc, .WbUJNb:hover .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:active .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .rvBHac .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .uWlRce, .GFoASc, .rHV3jf, .WpeOqd
     {
         border-radius: inherit;
-        border-color: rosepine-iris;
+        border-color: @rosepine-iris;
     }
     .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):hover, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):active, .bc5ALd .VfPpkd-RKhZBe-LgbsSe-OWXEXe-bAa4l:not(:disabled):focus:active, .MFfTvd.qs41qe .KLPWzf, .hN1OOc.eumXzf::after
     {
-        border-color: rosepine-iris;
+        border-color: @rosepine-iris;
     }
     
     div[aria-label="Loading"] > div > span, .rxb0oe .VfPpkd-qNpTzb-P4pF8c-SmKAyb {
-        border-color: rosepine-iris !important;
+        border-color: @rosepine-iris !important;
     }
     .BWOvob, .vnnr5e:not(.RDPZE).u3bW4e .mIZh1c, .lfaV6e, .cWL65e, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-Qsb3yd::before, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-Qsb3yd::after, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe) .VfPpkd-Qsb3yd::before, .LXctle.VfPpkd-scr2fc-OWXEXe-gk6SMd:enabled:hover:not(.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe) .VfPpkd-Qsb3yd::after
     {
-        background-color: rosepine-iris;
+        background-color: @rosepine-iris;
     }
     .uNeeU, .W9wDc.IYewr .poFWNe:not([disabled]):focus ~ .qTs5Xc, .W9wDc.IYewr .n9IS1 .qTs5Xc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) + .VfPpkd-fmcmS-yrriRe-W0vJo-RWgCYc .VfPpkd-fmcmS-yrriRe-W0vJo-fmcmS, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-NLUYnc-V67aGc
     {
-        color: rosepine-love;
+        color: @rosepine-love;
     }
     .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .WmnPA.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:hover:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me) .VfPpkd-RWgCYc-ksKsZd::before, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Brv4Fb, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-Ra9xwd, .cfWmIb.VfPpkd-fmcmS-yrriRe-OWXEXe-UJflGc:not(.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me):not(.VfPpkd-fmcmS-yrriRe-OWXEXe-XpnDCe):hover .VfPpkd-NSFCdd-i5vt6e .VfPpkd-NSFCdd-MpmGFe
     {
-        border-color: rosepine-love;
+        border-color: @rosepine-love;
     }
     .W9wDc.IYewr .AKIybd, .W9wDc.IYewr .cWL65e
     {
-        background-color: rosepine-love;
+        background-color: @rosepine-love;
     }
     .RcHwO
     {
-        border-bottom: .0625rem solid rosepine-highlightHigh;
+        border-bottom: .0625rem solid @rosepine-highlightHigh;
     }
     .VfPpkd-xl07Ob-XxIAqe, .ncFHed, .ybOdnf .OA0qNb
     {
@@ -328,26 +329,26 @@
     }
     .EY8ABd .VfPpkd-z59Tgd, .VOBzC .VfPpkd-YAxtVc, .VOBzC .VfPpkd-gIZMF, .R8qYlc, .RM9ulf
     {
-        background-color: rosepine-text;
-        color: rosepine-base;
+        background-color: @rosepine-text;
+        color: @rosepine-base;
     }
     /* :( part */
     .SZ0kZe
     {
         border-color: transparent;
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
     }
     *
     {
-        caret-color: rosepine-iris !important;
+        caret-color: @rosepine-iris !important;
     }
     .Xi8cpb:hover .LlcfK, .qr5cDe:hover .LlcfK
     {
-        outline: 1px solid rosepine-highlightMed;
+        outline: 1px solid @rosepine-highlightMed;
     }
     .VfPpkd-xl07Ob-XxIAqe, .ncFHed, .ybOdnf .OA0qNb
     {
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
         box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
     }
     .ZizeYd.qm64Ve
@@ -357,7 +358,7 @@
     }
     .Xi8cpb:focus:not(:active) .LlcfK, .qr5cDe:focus:not(:active) .LlcfK
     {
-        border: 3px solid rosepine-iris;
+        border: 3px solid @rosepine-iris;
     }
     .vzcr8
     {
@@ -389,7 +390,7 @@
     }
     .JPgtMb
     {
-        border-color: rosepine-text;
+        border-color: @rosepine-text;
     }
     .N6nSod:hover, .gb_Kc .gb_hd.gb_id button:hover svg, .gb_hd button:hover svg, .gb_A:hover, .gb_Kc .gb_hd.gb_id button:focus svg, .gb_Kc .gb_hd.gb_id button:focus:hover svg, .gb_hd button:focus svg, .gb_hd button:focus:hover svg, .gb_A:focus, .gb_A:focus:hover
     {
@@ -503,7 +504,7 @@
 .VfPpkd-xl07Ob .VfPpkd-StrnGf-rymPhb-clz4Ic
 {
     margin: 4px 0;
-    border-color: rosepine-highlightMed;
+    border-color: @rosepine-highlightMed;
 }
 .VfPpkd-XqMb-JNdkSc
 {
@@ -556,112 +557,112 @@
 /*
 @-moz-document url-prefix("https://drive.google.com/picker") {
     body {
-        background-color: rosepine-overlay;
-        color: rosepine-text;
+        background-color: @rosepine-overlay;
+        color: @rosepine-text;
     }
     
   .XV0XSd.KkxPLb {
-        --dt-background: rosepine-overlay;
-        --dt-on-background: rosepine-text;
-        --dt-on-background-secondary: rosepine-subtle;
-        --dt-outline: rosepine-highlightHigh;
-        --dt-outline-variant: rosepine-highlightMed;
-        --dt-on-disabled: rosepine-muted;
-        --dt-disabled: rosepine-surface;
-        --dt-inverse-on-surface: rosepine-highlightMed;
-        --dt-inverse-surface: rosepine-text;
-        --dt-on-surface-variant: rosepine-subtle;
-        --dt-on-surface-secondary: rosepine-subtle;
-        --dt-on-surface: rosepine-text;
+        --dt-background: @rosepine-overlay;
+        --dt-on-background: @rosepine-text;
+        --dt-on-background-secondary: @rosepine-subtle;
+        --dt-outline: @rosepine-highlightHigh;
+        --dt-outline-variant: @rosepine-highlightMed;
+        --dt-on-disabled: @rosepine-muted;
+        --dt-disabled: @rosepine-surface;
+        --dt-inverse-on-surface: @rosepine-highlightMed;
+        --dt-inverse-surface: @rosepine-text;
+        --dt-on-surface-variant: @rosepine-subtle;
+        --dt-on-surface-secondary: @rosepine-subtle;
+        --dt-on-surface: @rosepine-text;
         --dt-surface-tint: transparent;
-        --dt-surface-variant: rosepine-surface;
+        --dt-surface-variant: @rosepine-surface;
         --dt-shadow-elevation-1: 0 1px 2px 0 rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15);
         --dt-shadow-elevation-2: 0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);
         --dt-shadow-elevation-3: 0 1px 3px 0 rgba(60,64,67,0.3),0 4px 8px 3px rgba(60,64,67,0.15);
         --dt-shadow-elevation-4: 0 2px 3px 0 rgba(60,64,67,0.3),0 6px 10px 4px rgba(60,64,67,0.15);
         --dt-shadow-elevation-5: 0 4px 4px 0 rgba(60,64,67,0.3),0 8px 12px 6px rgba(60,64,67,0.15);
-        --dt-surface: rosepine-overlay;
-        --dt-surface-container-lowest: rosepine-surface;
-        --dt-surface-container-low: rosepine-surface;
-        --dt-surface-container: rosepine-surface;
-        --dt-surface-container-high: rosepine-surface;
-        --dt-surface-container-highest: rosepine-surface;
-        --dt-surface-dim: rosepine-surface;
-        --dt-surface-bright: rosepine-surface;
+        --dt-surface: @rosepine-overlay;
+        --dt-surface-container-lowest: @rosepine-surface;
+        --dt-surface-container-low: @rosepine-surface;
+        --dt-surface-container: @rosepine-surface;
+        --dt-surface-container-high: @rosepine-surface;
+        --dt-surface-container-highest: @rosepine-surface;
+        --dt-surface-dim: @rosepine-surface;
+        --dt-surface-bright: @rosepine-surface;
         --dt-scrim: rgba(32,33,36,0.6);
         --dt-scrim-2x: rgb(32,33,36);
-        --dt-on-primary-container: rosepine-text;
-        --dt-on-primary: rosepine-surface;
-        --dt-primary-action-state-layer: rosepine-iris;
-        --dt-primary-action-stateful: rosepine-iris;
-        --dt-primary-action: rosepine-iris;
-        --dt-primary-container-icon: rosepine-iris;
-        --dt-primary-container-link: rosepine-iris;
-        --dt-primary-container: rosepine-surface;
-        --dt-primary-icon: rosepine-text;
-        --dt-primary-link: rosepine-text;
-        --dt-primary-outline: rosepine-iris;
-        --dt-primary: rosepine-iris;
-        --dt-on-secondary-container: rosepine-text;
-        --dt-on-secondary: rosepine-overlay;
-        --dt-secondary-action-state-layer: rosepine-iris;
-        --dt-secondary-action-stateful: rosepine-iris;
-        --dt-secondary-action: rosepine-iris;
-        --dt-secondary-container-icon: rosepine-subtle;
-        --dt-secondary-container-link: rosepine-subtle;
-        --dt-secondary-container: rosepine-subtle;
-        --dt-secondary-icon: rosepine-subtle;
-        --dt-secondary-link: rosepine-subtle;
-        --dt-secondary-outline: rosepine-highlightMed;
-        --dt-secondary: rosepine-subtle;
-        --dt-on-tertiary-container: rosepine-subtle;
-        --dt-on-tertiary: rosepine-text;
-        --dt-tertiary-action-state-layer: rosepine-rose;
-        --dt-tertiary-action-stateful: rosepine-rose;
-        --dt-tertiary-action: rosepine-rose;
-        --dt-tertiary-container-icon: rosepine-rose;
-        --dt-tertiary-container-link: rosepine-rose;
-        --dt-tertiary-container: rosepine-surface;
-        --dt-tertiary-icon: rosepine-subtle;
-        --dt-tertiary-link: rosepine-subtle;
-        --dt-tertiary-outline: rosepine-rose;
-        --dt-tertiary: rosepine-rose;
-        --dt-on-neutral-container: rosepine-surface;
-        --dt-on-neutral: rosepine-text;
-        --dt-neutral-action-state-layer: rosepine-iris;
-        --dt-neutral-action-stateful: rosepine-iris;
-        --dt-neutral-action: rosepine-iris;
-        --dt-neutral-container-icon: rosepine-iris;
-        --dt-neutral-container-link: rosepine-iris;
-        --dt-neutral-container: rosepine-surface;
-        --dt-neutral-icon: rosepine-text;
-        --dt-neutral-link: rosepine-text;
-        --dt-neutral-outline: rosepine-highlightMed;
-        --dt-neutral: rosepine-subtle;
-        --dt-error-action-state-layer: rosepine-love;
-        --dt-error-action-stateful: rosepine-love;
-        --dt-error-action: rosepine-love;
-        --dt-error-container-icon: rosepine-love;
-        --dt-error-container-link: rosepine-love;
-        --dt-error-container: rosepine-surface;
-        --dt-error-icon: rosepine-love;
-        --dt-error-link: rosepine-love;
-        --dt-error-outline: rosepine-love;
-        --dt-error: rosepine-love;
-        --dt-on-error-container: rosepine-surface;
-        --dt-on-error: rosepine-surface;
-        --dt-on-warning-container: rosepine-text;
-        --dt-on-warning: rosepine-text;
-        --dt-warning-action-state-layer: rosepine-gold;
-        --dt-warning-action-stateful: rosepine-text;
-        --dt-warning-action: rosepine-text;
-        --dt-warning-container-icon: rosepine-text;
-        --dt-warning-container-link: rosepine-text;
-        --dt-warning-container: rosepine-surface;
-        --dt-warning-icon: rosepine-text;
-        --dt-warning-link: rosepine-text;
-        --dt-warning-outline: rosepine-gold;
-        --dt-warning: rosepine-gold;
+        --dt-on-primary-container: @rosepine-text;
+        --dt-on-primary: @rosepine-surface;
+        --dt-primary-action-state-layer: @rosepine-iris;
+        --dt-primary-action-stateful: @rosepine-iris;
+        --dt-primary-action: @rosepine-iris;
+        --dt-primary-container-icon: @rosepine-iris;
+        --dt-primary-container-link: @rosepine-iris;
+        --dt-primary-container: @rosepine-surface;
+        --dt-primary-icon: @rosepine-text;
+        --dt-primary-link: @rosepine-text;
+        --dt-primary-outline: @rosepine-iris;
+        --dt-primary: @rosepine-iris;
+        --dt-on-secondary-container: @rosepine-text;
+        --dt-on-secondary: @rosepine-overlay;
+        --dt-secondary-action-state-layer: @rosepine-iris;
+        --dt-secondary-action-stateful: @rosepine-iris;
+        --dt-secondary-action: @rosepine-iris;
+        --dt-secondary-container-icon: @rosepine-subtle;
+        --dt-secondary-container-link: @rosepine-subtle;
+        --dt-secondary-container: @rosepine-subtle;
+        --dt-secondary-icon: @rosepine-subtle;
+        --dt-secondary-link: @rosepine-subtle;
+        --dt-secondary-outline: @rosepine-highlightMed;
+        --dt-secondary: @rosepine-subtle;
+        --dt-on-tertiary-container: @rosepine-subtle;
+        --dt-on-tertiary: @rosepine-text;
+        --dt-tertiary-action-state-layer: @rosepine-rose;
+        --dt-tertiary-action-stateful: @rosepine-rose;
+        --dt-tertiary-action: @rosepine-rose;
+        --dt-tertiary-container-icon: @rosepine-rose;
+        --dt-tertiary-container-link: @rosepine-rose;
+        --dt-tertiary-container: @rosepine-surface;
+        --dt-tertiary-icon: @rosepine-subtle;
+        --dt-tertiary-link: @rosepine-subtle;
+        --dt-tertiary-outline: @rosepine-rose;
+        --dt-tertiary: @rosepine-rose;
+        --dt-on-neutral-container: @rosepine-surface;
+        --dt-on-neutral: @rosepine-text;
+        --dt-neutral-action-state-layer: @rosepine-iris;
+        --dt-neutral-action-stateful: @rosepine-iris;
+        --dt-neutral-action: @rosepine-iris;
+        --dt-neutral-container-icon: @rosepine-iris;
+        --dt-neutral-container-link: @rosepine-iris;
+        --dt-neutral-container: @rosepine-surface;
+        --dt-neutral-icon: @rosepine-text;
+        --dt-neutral-link: @rosepine-text;
+        --dt-neutral-outline: @rosepine-highlightMed;
+        --dt-neutral: @rosepine-subtle;
+        --dt-error-action-state-layer: @rosepine-love;
+        --dt-error-action-stateful: @rosepine-love;
+        --dt-error-action: @rosepine-love;
+        --dt-error-container-icon: @rosepine-love;
+        --dt-error-container-link: @rosepine-love;
+        --dt-error-container: @rosepine-surface;
+        --dt-error-icon: @rosepine-love;
+        --dt-error-link: @rosepine-love;
+        --dt-error-outline: @rosepine-love;
+        --dt-error: @rosepine-love;
+        --dt-on-error-container: @rosepine-surface;
+        --dt-on-error: @rosepine-surface;
+        --dt-on-warning-container: @rosepine-text;
+        --dt-on-warning: @rosepine-text;
+        --dt-warning-action-state-layer: @rosepine-gold;
+        --dt-warning-action-stateful: @rosepine-text;
+        --dt-warning-action: @rosepine-text;
+        --dt-warning-container-icon: @rosepine-text;
+        --dt-warning-container-link: @rosepine-text;
+        --dt-warning-container: @rosepine-surface;
+        --dt-warning-icon: @rosepine-text;
+        --dt-warning-link: @rosepine-text;
+        --dt-warning-outline: @rosepine-gold;
+        --dt-warning: @rosepine-gold;
         
         --dt-mime-type-blue: rgb(66,133,244);
         --dt-mime-type-dark-blue: #4D5DBA;
@@ -672,120 +673,71 @@
         --dt-mime-type-red: rgb(234,67,53);
         --dt-mime-type-yellow: rgb(251,188,4);
         
-        --gm3-sys-color-background: rosepine-overlay;
-/*         --gm3-sys-color-background-rgb: 255,255,255; */
-        --gm3-sys-color-error: rosepine-love;
-/*         --gm3-sys-color-error-rgb: 179,38,30; */
-        --gm3-sys-color-error-container: rosepine-surface;
-/*         --gm3-sys-color-error-container-rgb: 249,222,220; */
-        --gm3-sys-color-inverse-on-surface: rosepine-surface;
-/*         --gm3-sys-color-inverse-on-surface-rgb: 242,242,242; */
-        --gm3-sys-color-inverse-primary: rosepine-surface;
-/*         --gm3-sys-color-inverse-primary-rgb: 168,199,250; */
-        --gm3-sys-color-inverse-surface: rosepine-text;
-/*         --gm3-sys-color-inverse-surface-rgb: 48,48,48; */
-        --gm3-sys-color-on-background: rosepine-text;
-/*         --gm3-sys-color-on-background-rgb: 31,31,31; */
-        --gm3-sys-color-on-error: rosepine-surface;
-/*         --gm3-sys-color-on-error-rgb: 255,255,255; */
-        --gm3-sys-color-on-error-container: rosepine-text;
-/*         --gm3-sys-color-on-error-container-rgb: 65,14,11; */
-        --gm3-sys-color-on-primary: rosepine-surface;
-/*         --gm3-sys-color-on-primary-rgb: 255,255,255; */
-        --gm3-sys-color-on-primary-container: rosepine-text;
-/*         --gm3-sys-color-on-primary-container-rgb: 4,30,73; */
-        --gm3-sys-color-on-primary-fixed: rosepine-text;
-/*         --gm3-sys-color-on-primary-fixed-rgb: 4,30,73; */
-        --gm3-sys-color-on-primary-fixed-variant: rosepine-text;
-/*         --gm3-sys-color-on-primary-fixed-variant-rgb: 8,66,160; */
-        --gm3-sys-color-on-secondary: rosepine-surface;
-/*         --gm3-sys-color-on-secondary-rgb: 255,255,255; */
-        --gm3-sys-color-on-secondary-container: rosepine-text;
-/*         --gm3-sys-color-on-secondary-container-rgb: 0,29,53; */
-        --gm3-sys-color-on-secondary-fixed: rosepine-text;
-/*         --gm3-sys-color-on-secondary-fixed-rgb: 0,29,53; */
-        --gm3-sys-color-on-secondary-fixed-variant: rosepine-text;
-/*         --gm3-sys-color-on-secondary-fixed-variant-rgb: 0,74,119; */
-        --gm3-sys-color-on-surface: rosepine-text;
-/*         --gm3-sys-color-on-surface-rgb: 31,31,31; */
-        --gm3-sys-color-on-surface-variant: rosepine-subtle;
-/*         --gm3-sys-color-on-surface-variant-rgb: 68,71,70; */
-        --gm3-sys-color-on-tertiary: rosepine-surface;
-/*         --gm3-sys-color-on-tertiary-rgb: 255,255,255; */
-        --gm3-sys-color-on-tertiary-container: rosepine-text;
-/*         --gm3-sys-color-on-tertiary-container-rgb: 7,39,17; */
-        --gm3-sys-color-on-tertiary-fixed: rosepine-text;
-/*         --gm3-sys-color-on-tertiary-fixed-rgb: 7,39,17; */
-        --gm3-sys-color-on-tertiary-fixed-variant: rosepine-text;
-/*         --gm3-sys-color-on-tertiary-fixed-variant-rgb: 15,82,35; */
-        --gm3-sys-color-outline: rosepine-highlightHigh;
-/*         --gm3-sys-color-outline-rgb: 116,119,117; */
-        --gm3-sys-color-outline-variant: rosepine-highlightMed;
-/*         --gm3-sys-color-outline-variant-rgb: 196,199,197; */
-        --gm3-sys-color-primary: rosepine-iris;
-/*         --gm3-sys-color-primary-rgb: 11,87,208; */
-        --gm3-sys-color-primary-container: rosepine-surface;
-/*         --gm3-sys-color-primary-container-rgb: 211,227,253; */
-        --gm3-sys-color-primary-fixed: rosepine-surface;
-/*         --gm3-sys-color-primary-fixed-rgb: 211,227,253; */
-        --gm3-sys-color-primary-fixed-dim: rosepine-surface;
-/*         --gm3-sys-color-primary-fixed-dim-rgb: 168,199,250; */
-        --gm3-sys-color-scrim: rosepine-base;
-/*         --gm3-sys-color-scrim-rgb: 0,0,0; */
-        --gm3-sys-color-secondary: rosepine-iris;
-/*         --gm3-sys-color-secondary-rgb: 0,99,155; */
-        --gm3-sys-color-secondary-container: rosepine-surface;
-/*         --gm3-sys-color-secondary-container-rgb: 194,231,255; */
-        --gm3-sys-color-secondary-fixed: rosepine-iris;
-/*         --gm3-sys-color-secondary-fixed-rgb: 194,231,255; */
-        --gm3-sys-color-secondary-fixed-dim: rosepine-iris;
-/*         --gm3-sys-color-secondary-fixed-dim-rgb: 127,207,255; */
-        --gm3-sys-color-shadow: rosepine-base;
-/*         --gm3-sys-color-shadow-rgb: 0,0,0; */
-        --gm3-sys-color-surface: rosepine-overlay;
-/*         --gm3-sys-color-surface-rgb: 255,255,255; */
-        --gm3-sys-color-surface-bright: rosepine-surface;
-/*         --gm3-sys-color-surface-bright-rgb: 255,255,255; */
-        --gm3-sys-color-surface-container: rosepine-surface;
-/*         --gm3-sys-color-surface-container-rgb: 240,244,249; */
-        --gm3-sys-color-surface-container-high: rosepine-surface;
-/*         --gm3-sys-color-surface-container-high-rgb: 233,238,246; */
-        --gm3-sys-color-surface-container-highest: rosepine-surface;
-/*         --gm3-sys-color-surface-container-highest-rgb: 221,227,234; */
-        --gm3-sys-color-surface-container-low: rosepine-surface;
-/*         --gm3-sys-color-surface-container-low-rgb: 248,250,253; */
-        --gm3-sys-color-surface-container-lowest: rosepine-surface;
-/*         --gm3-sys-color-surface-container-lowest-rgb: 255,255,255; */
-        --gm3-sys-color-surface-dim: rosepine-surface;
-/*         --gm3-sys-color-surface-dim-rgb: 211,219,229; */
+        --gm3-sys-color-background: @rosepine-overlay;
+        --gm3-sys-color-error: @rosepine-love;
+        --gm3-sys-color-error-container: @rosepine-surface;
+        --gm3-sys-color-inverse-on-surface: @rosepine-surface;
+        --gm3-sys-color-inverse-primary: @rosepine-surface;
+        --gm3-sys-color-inverse-surface: @rosepine-text;
+        --gm3-sys-color-on-background: @rosepine-text;
+        --gm3-sys-color-on-error: @rosepine-surface;
+        --gm3-sys-color-on-error-container: @rosepine-text;
+        --gm3-sys-color-on-primary: @rosepine-surface;
+        --gm3-sys-color-on-primary-container: @rosepine-text;
+        --gm3-sys-color-on-primary-fixed: @rosepine-text;
+        --gm3-sys-color-on-primary-fixed-variant: @rosepine-text;
+        --gm3-sys-color-on-secondary: @rosepine-surface;
+        --gm3-sys-color-on-secondary-container: @rosepine-text;
+        --gm3-sys-color-on-secondary-fixed: @rosepine-text;
+        --gm3-sys-color-on-secondary-fixed-variant: @rosepine-text;
+        --gm3-sys-color-on-surface: @rosepine-text;
+        --gm3-sys-color-on-surface-variant: @rosepine-subtle;
+        --gm3-sys-color-on-tertiary: @rosepine-surface;
+        --gm3-sys-color-on-tertiary-container: @rosepine-text;
+        --gm3-sys-color-on-tertiary-fixed: @rosepine-text;
+        --gm3-sys-color-on-tertiary-fixed-variant: @rosepine-text;
+        --gm3-sys-color-outline: @rosepine-highlightHigh;
+        --gm3-sys-color-outline-variant: @rosepine-highlightMed;
+        --gm3-sys-color-primary: @rosepine-iris;
+        --gm3-sys-color-primary-container: @rosepine-surface;
+        --gm3-sys-color-primary-fixed: @rosepine-surface;
+        --gm3-sys-color-primary-fixed-dim: @rosepine-surface;
+        --gm3-sys-color-scrim: @rosepine-base;
+        --gm3-sys-color-secondary: @rosepine-iris;
+        --gm3-sys-color-secondary-container: @rosepine-surface;
+        --gm3-sys-color-secondary-fixed: @rosepine-iris;
+        --gm3-sys-color-secondary-fixed-dim: @rosepine-iris;
+        --gm3-sys-color-shadow: @rosepine-base;
+        --gm3-sys-color-surface: @rosepine-overlay;
+        --gm3-sys-color-surface-bright: @rosepine-surface;
+        --gm3-sys-color-surface-container: @rosepine-surface;
+        --gm3-sys-color-surface-container-high: @rosepine-surface;
+        --gm3-sys-color-surface-container-highest: @rosepine-surface;
+        --gm3-sys-color-surface-container-low: @rosepine-surface;
+        --gm3-sys-color-surface-container-lowest: @rosepine-surface;
+        --gm3-sys-color-surface-dim: @rosepine-surface;
         --gm3-sys-color-surface-tint: transparent;
-/*         --gm3-sys-color-surface-tint-rgb: 105,145,214; */
-        --gm3-sys-color-surface-variant: rosepine-surface;
-/*         --gm3-sys-color-surface-variant-rgb: 225,227,225; */
-        --gm3-sys-color-tertiary: rosepine-rose;
-/*         --gm3-sys-color-tertiary-rgb: 20,108,46; */
-        --gm3-sys-color-tertiary-container: rosepine-surface;
-/*         --gm3-sys-color-tertiary-container-rgb: 196,238,208; */
-        --gm3-sys-color-tertiary-fixed: rosepine-rose;
-/*         --gm3-sys-color-tertiary-fixed-rgb: 196,238,208; */
-        --gm3-sys-color-tertiary-fixed-dim: rosepine-rose;
-/*         --gm3-sys-color-tertiary-fixed-dim-rgb: 109,213,140; */
+        --gm3-sys-color-surface-variant: @rosepine-surface;
+        --gm3-sys-color-tertiary: @rosepine-rose;
+        --gm3-sys-color-tertiary-container: @rosepine-surface;
+        --gm3-sys-color-tertiary-fixed: @rosepine-rose;
+        --gm3-sys-color-tertiary-fixed-dim: @rosepine-rose;
     }
     
     .WbUJNb:hover .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-jY41G-V67aGc, .WbUJNb:active .VfPpkd-jY41G-V67aGc, .jfvobd, .xJafod, .gtjro, .bSz6zd,.oZiBUc, .rlnPIf, .picker-navpane-horizontal-tab-bar-wrapper .goog-tab-selected {
-        color: rosepine-text;
+        color: @rosepine-text;
     }
     
     .WbUJNb .VfPpkd-jY41G-V67aGc, .XV0XSd .IzuY1c .fjSJOb input.Ax4B8, .I7ZCxe {
-        color: rosepine-subtle;
+        color: @rosepine-subtle;
     }
     
     .WbUJNb.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:hover.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc, .WbUJNb:active.VfPpkd-AznF2e-OWXEXe-auswjd .VfPpkd-jY41G-V67aGc {
-        color: rosepine-iris;
+        color: @rosepine-iris;
     }
     
     .rvBHac .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:hover .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb.VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:not(.VfPpkd-ksKsZd-mWPk3d):focus .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .WbUJNb:active .VfPpkd-AznF2e-wEcVzc-OWXEXe-NowJzb, .EmVfjc.qs41qe .ir3uv, .picker-navpane-horizontal-tab-bar-wrapper .goog-tab-selected {
-        border-color: rosepine-iris;
+        border-color: @rosepine-iris;
     }
     
     .VfPpkd-Bz112c-LgbsSe svg, .VfPpkd-Bz112c-LgbsSe img, .xJafod svg, .bSz6zd svg, .bSz6zd path[fill='#757575'], .I7ZCxe svg {
@@ -793,11 +745,11 @@
     }
     
     .VOEIyf .jBmls, div[aria-label="Loading"] {
-        background-color: rosepine-overlay !important;
+        background-color: @rosepine-overlay !important;
     }
     
     .picker-actionpane-frame, .XV0XSd .IzuY1c .ZWZruf, .oKubKe[aria-selected=true] {
-        background: rosepine-surface;
+        background: @rosepine-surface;
     }
     
     .xJafod {
@@ -807,15 +759,15 @@
 /*
 @-moz-document regexp("^https://ogs.google.com/.*") {
     body, .LzIwWe {
-        color: rosepine-text;
+        color: @rosepine-text;
     }
     
     .Lvwayc {
-        background-color: rosepine-overlay;
+        background-color: @rosepine-overlay;
     }
     
     .qLP7kc .jFfZdd, .rxb0oe .VfPpkd-qNpTzb-ajuXxc-RxYbNe, .rxb0oe .VfPpkd-qNpTzb-ajuXxc-ZMv3u {
-        background-color: rosepine-surface;
+        background-color: @rosepine-surface;
     }
     
     .aFCkf {
@@ -823,23 +775,23 @@
     }
     
     .eYSAde, .Z6NXed, .fVFoBd {
-        color: rosepine-subtle;
+        color: @rosepine-subtle;
     }
     
     .WkuXae, .aFCkf {
-        color: rosepine-iris;
+        color: @rosepine-iris;
     }
     
     .rxb0oe .VfPpkd-qNpTzb-P4pF8c-SmKAyb {
-        border-color: rosepine-iris;
+        border-color: @rosepine-iris;
     }
     
     .coHE2:hover {
-        background-color: alpha(rosepine-iris, .08)
+        background-color: alpha(@rosepine-iris, .08)
     }
     
     .coHE2:active, .coHE2:active:focus-visible {
-        background-color: alpha(rosepine-iris, .12)
+        background-color: alpha(@rosepine-iris, .12)
     }
 } */
 
@@ -847,66 +799,66 @@
     body
     {
         color-scheme: dark;
-        --mdc-theme-on-surface: rosepine-text;
-        --mdc-theme-text-primary-on-background: rosepine-text;
-        --gm-hairlinebutton-ink-color: rosepine-iris;
-        --gm-hairlinebutton-ink-color--stateful: rosepine-iris;
-        --gm-hairlinebutton-state-color: rosepine-iris;
-        --gm-hairlinebutton-outline-color--stateful: rosepine-iris;
-        --mdc-text-button-label-text-color: rosepine-iris;
-        --mdc-text-button-hover-label-text-color: rosepine-iris;
-        --mdc-text-button-focus-label-text-color: rosepine-iris;
-        --mdc-text-button-pressed-label-text-color: rosepine-iris;
-        --mdc-text-button-hover-state-layer-color: rosepine-iris;
-        --mdc-text-button-pressed-state-layer-color: rosepine-iris;
-        --mdc-outlined-button-label-text-color: rosepine-text;
-        --mdc-outlined-button-hover-label-text-color: rosepine-text;
-        --mdc-outlined-button-focus-label-text-color: rosepine-text;
-        --mdc-outlined-button-pressed-label-text-color: rosepine-text;
-        --mdc-outlined-button-disabled-label-text-color: rosepine-text;
-        --mdc-outlined-button-outline-color: rosepine-iris;
-        --mdc-outlined-button-hover-state-layer-color: rosepine-iris;
-        --mdc-outlined-button-pressed-state-layer-color: rosepine-iris;
-        --mdc-outlined-button-focus-outline-color: rosepine-iris;
-        --gm-fillbutton-container-color: rosepine-iris;
-        --gm-fillbutton-ink-color: rosepine-overlay;
-        --gm-fillbutton-disabled-ink-color: rosepine-muted;
-        --gm-colortextbutton-state-color: rosepine-iris;
-        --gm-colortextbutton-ink-color: rosepine-iris;
-        --gm-colortextbutton-ink-color--stateful: rosepine-iris;
-        --gm-colortextbutton-disabled-ink-color: rosepine-muted;
-        --gm-iconbutton-disabled-ink-color: rosepine-muted;
-        --mdc-ripple-color: rosepine-iris;
-        --mdc-checkbox-unselected-hover-icon-color: rosepine-text;
-        --mdc-checkbox-unselected-focus-icon-color: rosepine-text;
-        --mdc-checkbox-unselected-icon-color: rosepine-text;
-        --mdc-checkbox-unselected-pressed-icon-color: rosepine-text;
-        --mdc-checkbox-unselected-hover-state-layer-color: rosepine-iris;
-        --mdc-checkbox-unselected-pressed-state-layer-color: rosepine-iris;
-        --mdc-checkbox-selected-checkmark-color: rosepine-overlay;
-        --mdc-checkbox-selected-icon-color: rosepine-iris;
-        --mdc-checkbox-selected-hover-icon-color: rosepine-iris;
-        --mdc-checkbox-selected-focus-icon-color: rosepine-iris;
-        --mdc-checkbox-selected-pressed-icon-color: rosepine-iris;
-        --mdc-checkbox-selected-hover-state-layer-color: rosepine-iris;
-        --mdc-checkbox-selected-pressed-state-layer-color: rosepine-iris;
-        --gm-protectedbutton-ink-color: rosepine-iris;
-        --gm-protectedbutton-ink-color--stateful: rosepine-iris;
-        --gm-protectedbutton-state-color: rosepine-iris;
-        --gm-protectedbutton-container-color: rosepine-surface;
-        --pkw-background: rosepine-overlay;
-        --pkw-on-surface: rosepine-text;
-        --pkw-on-surface-variant: rosepine-subtle;
-        --pkw-outline-variant: rosepine-highlightMed;
-        --pkw-outline: rosepine-highlightMed;
-        --gm-outlinedtextfield-ink-color: rosepine-iris;
-        --gm-outlinedtextfield-caret-color: rosepine-iris;
-        --gm-outlinedtextfield-helper-text-color: rosepine-text;
-        --gm-outlinedtextfield-label-color: rosepine-text;
-        --gm-outlinedtextfield-outline-color: rosepine-highlightHigh;
-        --gm-outlinedtextfield-placeholder-color: rosepine-text;
-        --gm-outlinedtextfield-prefix-color: rosepine-text;
-        --gm-outlinedtextfield-suffix-color: rosepine-text;
+        --mdc-theme-on-surface: @rosepine-text;
+        --mdc-theme-text-primary-on-background: @rosepine-text;
+        --gm-hairlinebutton-ink-color: @rosepine-iris;
+        --gm-hairlinebutton-ink-color--stateful: @rosepine-iris;
+        --gm-hairlinebutton-state-color: @rosepine-iris;
+        --gm-hairlinebutton-outline-color--stateful: @rosepine-iris;
+        --mdc-text-button-label-text-color: @rosepine-iris;
+        --mdc-text-button-hover-label-text-color: @rosepine-iris;
+        --mdc-text-button-focus-label-text-color: @rosepine-iris;
+        --mdc-text-button-pressed-label-text-color: @rosepine-iris;
+        --mdc-text-button-hover-state-layer-color: @rosepine-iris;
+        --mdc-text-button-pressed-state-layer-color: @rosepine-iris;
+        --mdc-outlined-button-label-text-color: @rosepine-text;
+        --mdc-outlined-button-hover-label-text-color: @rosepine-text;
+        --mdc-outlined-button-focus-label-text-color: @rosepine-text;
+        --mdc-outlined-button-pressed-label-text-color: @rosepine-text;
+        --mdc-outlined-button-disabled-label-text-color: @rosepine-text;
+        --mdc-outlined-button-outline-color: @rosepine-iris;
+        --mdc-outlined-button-hover-state-layer-color: @rosepine-iris;
+        --mdc-outlined-button-pressed-state-layer-color: @rosepine-iris;
+        --mdc-outlined-button-focus-outline-color: @rosepine-iris;
+        --gm-fillbutton-container-color: @rosepine-iris;
+        --gm-fillbutton-ink-color: @rosepine-overlay;
+        --gm-fillbutton-disabled-ink-color: @rosepine-muted;
+        --gm-colortextbutton-state-color: @rosepine-iris;
+        --gm-colortextbutton-ink-color: @rosepine-iris;
+        --gm-colortextbutton-ink-color--stateful: @rosepine-iris;
+        --gm-colortextbutton-disabled-ink-color: @rosepine-muted;
+        --gm-iconbutton-disabled-ink-color: @rosepine-muted;
+        --mdc-ripple-color: @rosepine-iris;
+        --mdc-checkbox-unselected-hover-icon-color: @rosepine-text;
+        --mdc-checkbox-unselected-focus-icon-color: @rosepine-text;
+        --mdc-checkbox-unselected-icon-color: @rosepine-text;
+        --mdc-checkbox-unselected-pressed-icon-color: @rosepine-text;
+        --mdc-checkbox-unselected-hover-state-layer-color: @rosepine-iris;
+        --mdc-checkbox-unselected-pressed-state-layer-color: @rosepine-iris;
+        --mdc-checkbox-selected-checkmark-color: @rosepine-overlay;
+        --mdc-checkbox-selected-icon-color: @rosepine-iris;
+        --mdc-checkbox-selected-hover-icon-color: @rosepine-iris;
+        --mdc-checkbox-selected-focus-icon-color: @rosepine-iris;
+        --mdc-checkbox-selected-pressed-icon-color: @rosepine-iris;
+        --mdc-checkbox-selected-hover-state-layer-color: @rosepine-iris;
+        --mdc-checkbox-selected-pressed-state-layer-color: @rosepine-iris;
+        --gm-protectedbutton-ink-color: @rosepine-iris;
+        --gm-protectedbutton-ink-color--stateful: @rosepine-iris;
+        --gm-protectedbutton-state-color: @rosepine-iris;
+        --gm-protectedbutton-container-color: @rosepine-surface;
+        --pkw-background: @rosepine-overlay;
+        --pkw-on-surface: @rosepine-text;
+        --pkw-on-surface-variant: @rosepine-subtle;
+        --pkw-outline-variant: @rosepine-highlightMed;
+        --pkw-outline: @rosepine-highlightMed;
+        --gm-outlinedtextfield-ink-color: @rosepine-iris;
+        --gm-outlinedtextfield-caret-color: @rosepine-iris;
+        --gm-outlinedtextfield-helper-text-color: @rosepine-text;
+        --gm-outlinedtextfield-label-color: @rosepine-text;
+        --gm-outlinedtextfield-outline-color: @rosepine-highlightHigh;
+        --gm-outlinedtextfield-placeholder-color: @rosepine-text;
+        --gm-outlinedtextfield-prefix-color: @rosepine-text;
+        --gm-outlinedtextfield-suffix-color: @rosepine-text;
         /*         --gm-outlinedtextfield-ink-color--disabled
         --gm-outlinedtextfield-outline-color--disabled
         --gm-outlinedtextfield-label-color--disabled
@@ -919,14 +871,14 @@
         --gm-outlinedtextfield-placeholder-color--disabled
         --gm-outlinedtextfield-prefix-color--disabled
         --gm-outlinedtextfield-suffix-color--disabled */
-        --gm-outlinedtextfield-outline-color--stateful: rosepine-iris;
-        --gm-outlinedtextfield-label-color--stateful: rosepine-iris;
-        --gm-outlinedtextfield-caret-color--error: rosepine-iris;
-        --gm-outlinedtextfield-helper-text-color--error: rosepine-love;
-        --gm-outlinedtextfield-outline-color--error: rosepine-love;
-        --gm-outlinedtextfield-icon-color--error: rosepine-love;
-        --gm-outlinedtextfield-outline-color--error-stateful: rosepine-love;
-        --gm-outlinedtextfield-label-color--stateful: rosepine-love;
-        --gm-outlinedtextfield-label-color--error: rosepine-love;
+        --gm-outlinedtextfield-outline-color--stateful: @rosepine-iris;
+        --gm-outlinedtextfield-label-color--stateful: @rosepine-iris;
+        --gm-outlinedtextfield-caret-color--error: @rosepine-iris;
+        --gm-outlinedtextfield-helper-text-color--error: @rosepine-love;
+        --gm-outlinedtextfield-outline-color--error: @rosepine-love;
+        --gm-outlinedtextfield-icon-color--error: @rosepine-love;
+        --gm-outlinedtextfield-outline-color--error-stateful: @rosepine-love;
+        --gm-outlinedtextfield-label-color--stateful: @rosepine-love;
+        --gm-outlinedtextfield-label-color--error: @rosepine-love;
     }
 }
