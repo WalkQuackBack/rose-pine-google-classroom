@@ -1,0 +1,892 @@
+/* ==UserStyle==
+@name Google Classroom Rose Pine
+@namespace github.com/WalkQuackBack/rose-pine-google-classroom
+@description Soho vibes for Google Classroom
+@version 2025.10.20
+@updateURL https://github.com/WalkQuackBack/rose-pine-google-classroom/raw/refs/heads/main/index.user.less
+@homepageURL https://github.com/WalkQuackBack/rose-pine-google-classroom
+@supportURL https://github.com/WalkQuackBack/rose-pine-google-classroom/issues
+@author WalkQuackBack
+@license MIT
+
+@preprocessor less
+@var select lightVari "Light Variant" ["base:Base", "moon:Moon", "dawn:Dawn*"]
+@var select darkVari "Dark Variant" ["base:Base*", "moon:Moon", "dawn:Dawn"]
+@var select accentColor "Accent" ["text:Text", "love:Love", "gold:Gold", "rose:Rose", "pine:Pine", "foam:Foam", "iris:Iris*"]
+==/UserStyle== */
+
+@-moz-document url-prefix("https://classroom.google.com") {
+  html:is(html), body:is(body) {
+    @media (prefers-color-scheme: light) {
+      #rosepine(@lightVari); 
+    }
+    @media (prefers-color-scheme: dark) {
+      #rosepine(@darkVari); 
+    }
+  }
+  
+  @import (inline)
+      "https://github.com/WalkQuackBack/google-suite-color-theme/raw/refs/heads/main/classroom.raw.css";
+
+  #rosepine(@vari) {
+    @base: @rosepine[@@vari][@base];
+    @surface: @rosepine[@@vari][@surface];
+    @overlay: @rosepine[@@vari][@overlay];
+    @muted: @rosepine[@@vari][@muted];
+    @subtle: @rosepine[@@vari][@subtle];
+    @text: @rosepine[@@vari][@text];
+    @love: @rosepine[@@vari][@love];
+    @gold: @rosepine[@@vari][@gold];
+    @rose: @rosepine[@@vari][@rose];
+    @pine: @rosepine[@@vari][@pine];
+    @foam: @rosepine[@@vari][@foam];
+    @iris: @rosepine[@@vari][@iris];
+    @highlightLow: @rosepine[@@vari][@highlightLow];
+    @highlightMed: @rosepine[@@vari][@highlightMed];
+    @highlightHigh: @rosepine[@@vari][@highlightHigh];
+    
+    @accent: @rosepine[@@vari][@@accentColor];
+    
+    --invert: if(@vari = dawn, none, invert(0.975) hue-rotate(180deg));
+
+    #__m3.base();
+    #__m3.with-prefix(gm3-sys-color-);
+    
+    background-color: var(--gm3-sys-color-surface);
+    color: var(--gm3-sys-color-on-surface);
+
+    color-scheme: light dark;
+    scrollbar-color: var(
+        --gm3-dialog-scrollbar-thumb-color,
+        var(--gm3-sys-color-outline, #747775)
+    ) var(--gm3-dialog-scrollbar-track-color, transparent);
+    
+    /* Assignment icon */
+    .MwOlIe {
+        color: #fff;
+        fill: #fff;
+    }
+    .MwOlIe .DPvwYc {
+        color: #fff;
+    }
+    
+    /* Class card text (always white for contrast) */
+    .XwD7Ke,
+    /* Class card course text */
+    .Svw0vd {
+        color: #fff;
+    }
+    
+    /* Class card [hover] */
+    .rZXyy.YwNp1,
+    .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover,
+    .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
+        box-shadow:
+            0 1px 2px 0 rgba(var(--gm3-sys-color-shadow-rgb), 0.3),
+            0 2px 6px 2px rgba(var(--gm3-sys-color-shadow-rgb), 0.15);
+    }
+
+    /* Cards */
+    .Aopndd,
+    /* Create new Post card outer */
+    .GWZ7yf,
+    /* Create new Post card inner */
+    .hgjBDc,
+    /* Stream "Upcoming" card */
+    .d4Fe0d {
+        background-color: var(--gm3-sys-color-surface-container-low);
+        border-color: transparent;
+        box-shadow: none;
+        border-radius: 16px;
+    }
+    /* Assignment document card */
+    a + .Aopndd {
+        background-color: var(--gm3-sys-color-surface-container-lowest);
+    }
+
+    /* Class card [hover] */
+    .rZXyy.YwNp1,
+    .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover,
+    .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
+        box-shadow:
+            0 1px 2px 0 rgba(var(--gm3-sys-color-shadow-rgb), 0.3),
+            0 2px 6px 2px rgba(var(--gm3-sys-color-shadow-rgb), 0.15);
+    }
+    
+    /* Class card text (always white for contrast) */
+    .XwD7Ke,
+    /* Class card course text */
+    .Svw0vd,
+    /* Class card instructor text */
+    .T30lh
+    {
+        color: #fff;
+    }
+    
+    /* Stream header icon button icon */
+    .TgJ2ub .YGy4X {
+        fill: #fff;
+    }
+    .qyN25 > .T4tcpe.PagUde > * {
+        color: #fff;
+    }
+    
+    /* Invert assignment icons */
+    .TGnLfc,
+    .MwOlIe {
+        filter: var(--invert)
+    }
+    
+    /* Floating help button */
+    .N6nSod {
+        background-color: var(--gm3-sys-color-surface-container-highest);
+    }
+    
+    /* Loading bar background (TODO: Fix upstream) */
+    .Po14Kd {
+        background-color: var(--gm3-sys-color-primary-container);
+    }
+    
+    /* Prof marking UI header */
+    [style="background-color:rgba(255,255,255,1)"] {
+        background-color: var(--gm3-sys-color-surface) !important;
+    }
+    
+    /* Some M3 palette overrides */
+    .rHGeGc-YPmvEd {
+      --gm3-list-list-item-selected-container-color: var(--gm3-sys-color-primary-container);
+    }
+    
+    /* Classroom colour coded icons */
+    .Ag4wUb.bFjUmb-Ysl7Fe,
+    .Ag4wUb .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .Ag4wUb.bFjUmb-Wvd9Cc,
+    .Ag4wUb .bFjUmb-Wvd9Cc {
+        background-color: rgb(25, 103, 210);
+    }
+    .Ag4wUb.bFjUmb-Tvm9db,
+    .Ag4wUb .bFjUmb-Tvm9db {
+        background-color: rgb(23, 78, 166);
+    }
+    .Ag4wUb.VnOHwf-Ysl7Fe,
+    .Ag4wUb .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .Ag4wUb.VnOHwf-Wvd9Cc,
+    .Ag4wUb .VnOHwf-Wvd9Cc {
+        color: rgb(25, 103, 210);
+        fill: rgb(25, 103, 210);
+    }
+    .Ag4wUb.VnOHwf-Tvm9db,
+    .Ag4wUb .VnOHwf-Tvm9db {
+        color: rgb(23, 78, 166);
+        fill: rgb(23, 78, 166);
+    }
+    .Ag4wUb.xE2ejc,
+    .Ag4wUb .xE2ejc {
+        border-color: rgb(25, 103, 210);
+    }
+    .Ag4wUb.CNpREd.bFjUmb-Ysl7Fe,
+    .Ag4wUb.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .Ag4wUb.CNpREd.bFjUmb-Wvd9Cc,
+    .Ag4wUb.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(25, 103, 210);
+    }
+    .Ag4wUb.CNpREd.bFjUmb-Tvm9db,
+    .Ag4wUb.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(23, 78, 166);
+    }
+    .Ag4wUb.CNpREd.VnOHwf-Ysl7Fe,
+    .Ag4wUb.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .Ag4wUb.CNpREd.VnOHwf-Wvd9Cc,
+    .Ag4wUb.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(25, 103, 210);
+        fill: rgb(25, 103, 210);
+    }
+    .Ag4wUb.CNpREd.VnOHwf-Tvm9db,
+    .Ag4wUb.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(23, 78, 166);
+        fill: rgb(23, 78, 166);
+    }
+    .Ag4wUb.CNpREd.xE2ejc,
+    .Ag4wUb.CNpREd .xE2ejc {
+        border-color: rgb(25, 103, 210);
+    }
+    .ee1HBc.bFjUmb-Ysl7Fe,
+    .ee1HBc .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .ee1HBc.bFjUmb-Wvd9Cc,
+    .ee1HBc .bFjUmb-Wvd9Cc {
+        background-color: rgb(66, 133, 244);
+    }
+    .ee1HBc.bFjUmb-Tvm9db,
+    .ee1HBc .bFjUmb-Tvm9db {
+        background-color: rgb(25, 103, 210);
+    }
+    .ee1HBc.VnOHwf-Ysl7Fe,
+    .ee1HBc .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .ee1HBc.VnOHwf-Wvd9Cc,
+    .ee1HBc .VnOHwf-Wvd9Cc {
+        color: rgb(66, 133, 244);
+        fill: rgb(66, 133, 244);
+    }
+    .ee1HBc.VnOHwf-Tvm9db,
+    .ee1HBc .VnOHwf-Tvm9db {
+        color: rgb(25, 103, 210);
+        fill: rgb(25, 103, 210);
+    }
+    .ee1HBc.xE2ejc,
+    .ee1HBc .xE2ejc {
+        border-color: rgb(66, 133, 244);
+    }
+    .ee1HBc.CNpREd.bFjUmb-Ysl7Fe,
+    .ee1HBc.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .ee1HBc.CNpREd.bFjUmb-Wvd9Cc,
+    .ee1HBc.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(66, 133, 244);
+    }
+    .ee1HBc.CNpREd.bFjUmb-Tvm9db,
+    .ee1HBc.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(25, 103, 210);
+    }
+    .ee1HBc.CNpREd.VnOHwf-Ysl7Fe,
+    .ee1HBc.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .ee1HBc.CNpREd.VnOHwf-Wvd9Cc,
+    .ee1HBc.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(66, 133, 244);
+        fill: rgb(66, 133, 244);
+    }
+    .ee1HBc.CNpREd.VnOHwf-Tvm9db,
+    .ee1HBc.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(25, 103, 210);
+        fill: rgb(25, 103, 210);
+    }
+    .ee1HBc.CNpREd.xE2ejc,
+    .ee1HBc.CNpREd .xE2ejc {
+        border-color: rgb(66, 133, 244);
+    }
+    .UvHKof.bFjUmb-Ysl7Fe,
+    .UvHKof .bFjUmb-Ysl7Fe {
+        background-color: rgb(241, 243, 244);
+    }
+    .UvHKof.bFjUmb-Wvd9Cc,
+    .UvHKof .bFjUmb-Wvd9Cc {
+        background-color: rgb(95, 99, 104);
+    }
+    .UvHKof.bFjUmb-Tvm9db,
+    .UvHKof .bFjUmb-Tvm9db {
+        background-color: rgb(32, 33, 36);
+    }
+    .UvHKof.VnOHwf-Ysl7Fe,
+    .UvHKof .VnOHwf-Ysl7Fe {
+        color: rgb(241, 243, 244);
+        fill: rgb(241, 243, 244);
+    }
+    .UvHKof.VnOHwf-Wvd9Cc,
+    .UvHKof .VnOHwf-Wvd9Cc {
+        color: rgb(95, 99, 104);
+        fill: rgb(95, 99, 104);
+    }
+    .UvHKof.VnOHwf-Tvm9db,
+    .UvHKof .VnOHwf-Tvm9db {
+        color: rgb(32, 33, 36);
+        fill: rgb(32, 33, 36);
+    }
+    .UvHKof.xE2ejc,
+    .UvHKof .xE2ejc {
+        border-color: rgb(95, 99, 104);
+    }
+    .UvHKof.CNpREd.bFjUmb-Ysl7Fe,
+    .UvHKof.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(241, 243, 244);
+    }
+    .UvHKof.CNpREd.bFjUmb-Wvd9Cc,
+    .UvHKof.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(95, 99, 104);
+    }
+    .UvHKof.CNpREd.bFjUmb-Tvm9db,
+    .UvHKof.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(32, 33, 36);
+    }
+    .UvHKof.CNpREd.VnOHwf-Ysl7Fe,
+    .UvHKof.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(241, 243, 244);
+        fill: rgb(241, 243, 244);
+    }
+    .UvHKof.CNpREd.VnOHwf-Wvd9Cc,
+    .UvHKof.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(95, 99, 104);
+        fill: rgb(95, 99, 104);
+    }
+    .UvHKof.CNpREd.VnOHwf-Tvm9db,
+    .UvHKof.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(32, 33, 36);
+        fill: rgb(32, 33, 36);
+    }
+    .UvHKof.CNpREd.xE2ejc,
+    .UvHKof.CNpREd .xE2ejc {
+        border-color: rgb(95, 99, 104);
+    }
+    .Z2flX.bFjUmb-Ysl7Fe,
+    .Z2flX .bFjUmb-Ysl7Fe {
+        background-color: rgb(248, 249, 250);
+    }
+    .Z2flX.bFjUmb-Wvd9Cc,
+    .Z2flX .bFjUmb-Wvd9Cc {
+        background-color: rgb(189, 193, 198);
+    }
+    .Z2flX.bFjUmb-Tvm9db,
+    .Z2flX .bFjUmb-Tvm9db {
+        background-color: rgb(95, 99, 104);
+    }
+    .Z2flX.VnOHwf-Ysl7Fe,
+    .Z2flX .VnOHwf-Ysl7Fe {
+        color: rgb(248, 249, 250);
+        fill: rgb(248, 249, 250);
+    }
+    .Z2flX.VnOHwf-Wvd9Cc,
+    .Z2flX .VnOHwf-Wvd9Cc {
+        color: rgb(189, 193, 198);
+        fill: rgb(189, 193, 198);
+    }
+    .Z2flX.VnOHwf-Tvm9db,
+    .Z2flX .VnOHwf-Tvm9db {
+        color: rgb(95, 99, 104);
+        fill: rgb(95, 99, 104);
+    }
+    .Z2flX.xE2ejc,
+    .Z2flX .xE2ejc {
+        border-color: rgb(189, 193, 198);
+    }
+    .Z2flX.CNpREd.bFjUmb-Ysl7Fe,
+    .Z2flX.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(248, 249, 250);
+    }
+    .Z2flX.CNpREd.bFjUmb-Wvd9Cc,
+    .Z2flX.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(189, 193, 198);
+    }
+    .Z2flX.CNpREd.bFjUmb-Tvm9db,
+    .Z2flX.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(95, 99, 104);
+    }
+    .Z2flX.CNpREd.VnOHwf-Ysl7Fe,
+    .Z2flX.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(248, 249, 250);
+        fill: rgb(248, 249, 250);
+    }
+    .Z2flX.CNpREd.VnOHwf-Wvd9Cc,
+    .Z2flX.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(189, 193, 198);
+        fill: rgb(189, 193, 198);
+    }
+    .Z2flX.CNpREd.VnOHwf-Tvm9db,
+    .Z2flX.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(95, 99, 104);
+        fill: rgb(95, 99, 104);
+    }
+    .Z2flX.CNpREd.xE2ejc,
+    .Z2flX.CNpREd .xE2ejc {
+        border-color: rgb(189, 193, 198);
+    }
+    .g2MItd.bFjUmb-Ysl7Fe,
+    .g2MItd .bFjUmb-Ysl7Fe {
+        background-color: rgb(254, 239, 227);
+    }
+    .g2MItd.bFjUmb-Wvd9Cc,
+    .g2MItd .bFjUmb-Wvd9Cc {
+        background-color: rgb(232, 113, 10);
+    }
+    .g2MItd.bFjUmb-Tvm9db,
+    .g2MItd .bFjUmb-Tvm9db {
+        background-color: rgb(194, 100, 1);
+    }
+    .g2MItd.VnOHwf-Ysl7Fe,
+    .g2MItd .VnOHwf-Ysl7Fe {
+        color: rgb(254, 239, 227);
+        fill: rgb(254, 239, 227);
+    }
+    .g2MItd.VnOHwf-Wvd9Cc,
+    .g2MItd .VnOHwf-Wvd9Cc {
+        color: rgb(232, 113, 10);
+        fill: rgb(232, 113, 10);
+    }
+    .g2MItd.VnOHwf-Tvm9db,
+    .g2MItd .VnOHwf-Tvm9db {
+        color: rgb(194, 100, 1);
+        fill: rgb(194, 100, 1);
+    }
+    .g2MItd.xE2ejc,
+    .g2MItd .xE2ejc {
+        border-color: rgb(232, 113, 10);
+    }
+    .g2MItd.CNpREd.bFjUmb-Ysl7Fe,
+    .g2MItd.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(254, 239, 227);
+    }
+    .g2MItd.CNpREd.bFjUmb-Wvd9Cc,
+    .g2MItd.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(232, 113, 10);
+    }
+    .g2MItd.CNpREd.bFjUmb-Tvm9db,
+    .g2MItd.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(194, 100, 1);
+    }
+    .g2MItd.CNpREd.VnOHwf-Ysl7Fe,
+    .g2MItd.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(254, 239, 227);
+        fill: rgb(254, 239, 227);
+    }
+    .g2MItd.CNpREd.VnOHwf-Wvd9Cc,
+    .g2MItd.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(232, 113, 10);
+        fill: rgb(232, 113, 10);
+    }
+    .g2MItd.CNpREd.VnOHwf-Tvm9db,
+    .g2MItd.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(194, 100, 1);
+        fill: rgb(194, 100, 1);
+    }
+    .g2MItd.CNpREd.xE2ejc,
+    .g2MItd.CNpREd .xE2ejc {
+        border-color: rgb(232, 113, 10);
+    }
+    .S3aLQd.bFjUmb-Ysl7Fe,
+    .S3aLQd .bFjUmb-Ysl7Fe {
+        background-color: rgb(228, 247, 251);
+    }
+    .S3aLQd.bFjUmb-Wvd9Cc,
+    .S3aLQd .bFjUmb-Wvd9Cc {
+        background-color: rgb(18, 158, 175);
+    }
+    .S3aLQd.bFjUmb-Tvm9db,
+    .S3aLQd .bFjUmb-Tvm9db {
+        background-color: rgb(0, 123, 131);
+    }
+    .S3aLQd.VnOHwf-Ysl7Fe,
+    .S3aLQd .VnOHwf-Ysl7Fe {
+        color: rgb(228, 247, 251);
+        fill: rgb(228, 247, 251);
+    }
+    .S3aLQd.VnOHwf-Wvd9Cc,
+    .S3aLQd .VnOHwf-Wvd9Cc {
+        color: rgb(18, 158, 175);
+        fill: rgb(18, 158, 175);
+    }
+    .S3aLQd.VnOHwf-Tvm9db,
+    .S3aLQd .VnOHwf-Tvm9db {
+        color: rgb(0, 123, 131);
+        fill: rgb(0, 123, 131);
+    }
+    .S3aLQd.xE2ejc,
+    .S3aLQd .xE2ejc {
+        border-color: rgb(18, 158, 175);
+    }
+    .S3aLQd.CNpREd.bFjUmb-Ysl7Fe,
+    .S3aLQd.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(228, 247, 251);
+    }
+    .S3aLQd.CNpREd.bFjUmb-Wvd9Cc,
+    .S3aLQd.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(18, 158, 175);
+    }
+    .S3aLQd.CNpREd.bFjUmb-Tvm9db,
+    .S3aLQd.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(0, 123, 131);
+    }
+    .S3aLQd.CNpREd.VnOHwf-Ysl7Fe,
+    .S3aLQd.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(228, 247, 251);
+        fill: rgb(228, 247, 251);
+    }
+    .S3aLQd.CNpREd.VnOHwf-Wvd9Cc,
+    .S3aLQd.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(18, 158, 175);
+        fill: rgb(18, 158, 175);
+    }
+    .S3aLQd.CNpREd.VnOHwf-Tvm9db,
+    .S3aLQd.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(0, 123, 131);
+        fill: rgb(0, 123, 131);
+    }
+    .S3aLQd.CNpREd.xE2ejc,
+    .S3aLQd.CNpREd .xE2ejc {
+        border-color: rgb(18, 158, 175);
+    }
+    .zvzLKc.bFjUmb-Ysl7Fe,
+    .zvzLKc .bFjUmb-Ysl7Fe {
+        background-color: rgb(253, 231, 243);
+    }
+    .zvzLKc.bFjUmb-Wvd9Cc,
+    .zvzLKc .bFjUmb-Wvd9Cc {
+        background-color: rgb(229, 37, 146);
+    }
+    .zvzLKc.bFjUmb-Tvm9db,
+    .zvzLKc .bFjUmb-Tvm9db {
+        background-color: rgb(184, 6, 114);
+    }
+    .zvzLKc.VnOHwf-Ysl7Fe,
+    .zvzLKc .VnOHwf-Ysl7Fe {
+        color: rgb(253, 231, 243);
+        fill: rgb(253, 231, 243);
+    }
+    .zvzLKc.VnOHwf-Wvd9Cc,
+    .zvzLKc .VnOHwf-Wvd9Cc {
+        color: rgb(229, 37, 146);
+        fill: rgb(229, 37, 146);
+    }
+    .zvzLKc.VnOHwf-Tvm9db,
+    .zvzLKc .VnOHwf-Tvm9db {
+        color: rgb(184, 6, 114);
+        fill: rgb(184, 6, 114);
+    }
+    .zvzLKc.xE2ejc,
+    .zvzLKc .xE2ejc {
+        border-color: rgb(229, 37, 146);
+    }
+    .zvzLKc.CNpREd.bFjUmb-Ysl7Fe,
+    .zvzLKc.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(253, 231, 243);
+    }
+    .zvzLKc.CNpREd.bFjUmb-Wvd9Cc,
+    .zvzLKc.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(229, 37, 146);
+    }
+    .zvzLKc.CNpREd.bFjUmb-Tvm9db,
+    .zvzLKc.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(184, 6, 114);
+    }
+    .zvzLKc.CNpREd.VnOHwf-Ysl7Fe,
+    .zvzLKc.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(253, 231, 243);
+        fill: rgb(253, 231, 243);
+    }
+    .zvzLKc.CNpREd.VnOHwf-Wvd9Cc,
+    .zvzLKc.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(229, 37, 146);
+        fill: rgb(229, 37, 146);
+    }
+    .zvzLKc.CNpREd.VnOHwf-Tvm9db,
+    .zvzLKc.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(184, 6, 114);
+        fill: rgb(184, 6, 114);
+    }
+    .zvzLKc.CNpREd.xE2ejc,
+    .zvzLKc.CNpREd .xE2ejc {
+        border-color: rgb(229, 37, 146);
+    }
+    .WFUiUb.bFjUmb-Ysl7Fe,
+    .WFUiUb .bFjUmb-Ysl7Fe {
+        background-color: rgb(230, 244, 234);
+    }
+    .WFUiUb.bFjUmb-Wvd9Cc,
+    .WFUiUb .bFjUmb-Wvd9Cc {
+        background-color: rgb(30, 142, 62);
+    }
+    .WFUiUb.bFjUmb-Tvm9db,
+    .WFUiUb .bFjUmb-Tvm9db {
+        background-color: rgb(19, 115, 51);
+    }
+    .WFUiUb.VnOHwf-Ysl7Fe,
+    .WFUiUb .VnOHwf-Ysl7Fe {
+        color: rgb(230, 244, 234);
+        fill: rgb(230, 244, 234);
+    }
+    .WFUiUb.VnOHwf-Wvd9Cc,
+    .WFUiUb .VnOHwf-Wvd9Cc {
+        color: rgb(30, 142, 62);
+        fill: rgb(30, 142, 62);
+    }
+    .WFUiUb.VnOHwf-Tvm9db,
+    .WFUiUb .VnOHwf-Tvm9db {
+        color: rgb(19, 115, 51);
+        fill: rgb(19, 115, 51);
+    }
+    .WFUiUb.xE2ejc,
+    .WFUiUb .xE2ejc {
+        border-color: rgb(30, 142, 62);
+    }
+    .WFUiUb.CNpREd.bFjUmb-Ysl7Fe,
+    .WFUiUb.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(230, 244, 234);
+    }
+    .WFUiUb.CNpREd.bFjUmb-Wvd9Cc,
+    .WFUiUb.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(30, 142, 62);
+    }
+    .WFUiUb.CNpREd.bFjUmb-Tvm9db,
+    .WFUiUb.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(19, 115, 51);
+    }
+    .WFUiUb.CNpREd.VnOHwf-Ysl7Fe,
+    .WFUiUb.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(230, 244, 234);
+        fill: rgb(230, 244, 234);
+    }
+    .WFUiUb.CNpREd.VnOHwf-Wvd9Cc,
+    .WFUiUb.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(30, 142, 62);
+        fill: rgb(30, 142, 62);
+    }
+    .WFUiUb.CNpREd.VnOHwf-Tvm9db,
+    .WFUiUb.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(19, 115, 51);
+        fill: rgb(19, 115, 51);
+    }
+    .WFUiUb.CNpREd.xE2ejc,
+    .WFUiUb.CNpREd .xE2ejc {
+        border-color: rgb(30, 142, 62);
+    }
+    .Mupove.bFjUmb-Ysl7Fe,
+    .Mupove .bFjUmb-Ysl7Fe {
+        background-color: rgb(243, 232, 253);
+    }
+    .Mupove.bFjUmb-Wvd9Cc,
+    .Mupove .bFjUmb-Wvd9Cc {
+        background-color: rgb(147, 52, 230);
+    }
+    .Mupove.bFjUmb-Tvm9db,
+    .Mupove .bFjUmb-Tvm9db {
+        background-color: rgb(118, 39, 187);
+    }
+    .Mupove.VnOHwf-Ysl7Fe,
+    .Mupove .VnOHwf-Ysl7Fe {
+        color: rgb(243, 232, 253);
+        fill: rgb(243, 232, 253);
+    }
+    .Mupove.VnOHwf-Wvd9Cc,
+    .Mupove .VnOHwf-Wvd9Cc {
+        color: rgb(147, 52, 230);
+        fill: rgb(147, 52, 230);
+    }
+    .Mupove.VnOHwf-Tvm9db,
+    .Mupove .VnOHwf-Tvm9db {
+        color: rgb(118, 39, 187);
+        fill: rgb(118, 39, 187);
+    }
+    .Mupove.xE2ejc,
+    .Mupove .xE2ejc {
+        border-color: rgb(147, 52, 230);
+    }
+    .Mupove.CNpREd.bFjUmb-Ysl7Fe,
+    .Mupove.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(243, 232, 253);
+    }
+    .Mupove.CNpREd.bFjUmb-Wvd9Cc,
+    .Mupove.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(147, 52, 230);
+    }
+    .Mupove.CNpREd.bFjUmb-Tvm9db,
+    .Mupove.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(118, 39, 187);
+    }
+    .Mupove.CNpREd.VnOHwf-Ysl7Fe,
+    .Mupove.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(243, 232, 253);
+        fill: rgb(243, 232, 253);
+    }
+    .Mupove.CNpREd.VnOHwf-Wvd9Cc,
+    .Mupove.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(147, 52, 230);
+        fill: rgb(147, 52, 230);
+    }
+    .Mupove.CNpREd.VnOHwf-Tvm9db,
+    .Mupove.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(118, 39, 187);
+        fill: rgb(118, 39, 187);
+    }
+    .Mupove.CNpREd.xE2ejc,
+    .Mupove.CNpREd .xE2ejc {
+        border-color: rgb(147, 52, 230);
+    }
+    .kYtXye.bFjUmb-Ysl7Fe,
+    .kYtXye .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .kYtXye.bFjUmb-Wvd9Cc,
+    .kYtXye .bFjUmb-Wvd9Cc {
+        background-color: rgb(26, 115, 232);
+    }
+    .kYtXye.bFjUmb-Tvm9db,
+    .kYtXye .bFjUmb-Tvm9db {
+        background-color: rgb(24, 90, 188);
+    }
+    .kYtXye.VnOHwf-Ysl7Fe,
+    .kYtXye .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .kYtXye.VnOHwf-Wvd9Cc,
+    .kYtXye .VnOHwf-Wvd9Cc {
+        color: rgb(26, 115, 232);
+        fill: rgb(26, 115, 232);
+    }
+    .kYtXye.VnOHwf-Tvm9db,
+    .kYtXye .VnOHwf-Tvm9db {
+        color: rgb(24, 90, 188);
+        fill: rgb(24, 90, 188);
+    }
+    .kYtXye.xE2ejc,
+    .kYtXye .xE2ejc {
+        border-color: rgb(26, 115, 232);
+    }
+    .kYtXye.CNpREd.bFjUmb-Ysl7Fe,
+    .kYtXye.CNpREd .bFjUmb-Ysl7Fe {
+        background-color: rgb(232, 240, 254);
+    }
+    .kYtXye.CNpREd.bFjUmb-Wvd9Cc,
+    .kYtXye.CNpREd .bFjUmb-Wvd9Cc {
+        background-color: rgb(26, 115, 232);
+    }
+    .kYtXye.CNpREd.bFjUmb-Tvm9db,
+    .kYtXye.CNpREd .bFjUmb-Tvm9db {
+        background-color: rgb(24, 90, 188);
+    }
+    .kYtXye.CNpREd.VnOHwf-Ysl7Fe,
+    .kYtXye.CNpREd .VnOHwf-Ysl7Fe {
+        color: rgb(232, 240, 254);
+        fill: rgb(232, 240, 254);
+    }
+    .kYtXye.CNpREd.VnOHwf-Wvd9Cc,
+    .kYtXye.CNpREd .VnOHwf-Wvd9Cc {
+        color: rgb(26, 115, 232);
+        fill: rgb(26, 115, 232);
+    }
+    .kYtXye.CNpREd.VnOHwf-Tvm9db,
+    .kYtXye.CNpREd .VnOHwf-Tvm9db {
+        color: rgb(24, 90, 188);
+        fill: rgb(24, 90, 188);
+    }
+    .kYtXye.CNpREd.xE2ejc,
+    .kYtXye.CNpREd .xE2ejc {
+        border-color: rgb(26, 115, 232);
+    }
+  }
+}
+
+#rgbify(@color) {
+  @rgb: red(@color), green(@color), blue(@color);
+}
+
+// Modfied off of
+// https://github.com/catppuccin/userstyles/blob/6da65a93dc7e47427078b6c9fd508be1e38383dc/lib/m3.less
+#__m3 {
+  .rgb(@id, @color) {
+    --@{id}: @color;
+    --@{id}-rgb: #rgbify(@color)[];
+  }
+
+  .token(@id, @color) {
+    --@{prefix}@{id}: @color;
+    --@{prefix}@{id}-rgb: #rgbify(@color)[];
+  }
+
+  .token-content(@id, @color, @content) {
+    --@{prefix}@{id}: @color;
+    --@{prefix}@{id}-rgb: #rgbify(@color)[];
+    
+    --@{prefix}on-@{id}: @content;
+    --@{prefix}on-@{id}-rgb: #rgbify(@content)[];
+  }
+
+  .token-content-container(@id, @color, @content) {
+    #__m3.token-content(@id, @color, @content);
+
+    --@{prefix}@{id}-container: mix(@color, @base, @m3-tint);
+    --@{prefix}@{id}-container-rgb: #rgbify(mix(@color, @base, @m3-tint))[];
+    --@{prefix}on-@{id}-container: lighten(@color, @m3-emphasize);
+    --@{prefix}on-@{id}-container-rgb: #rgbify(lighten(@color, @m3-emphasize))[];
+  }
+
+  .base() {
+    @m3-primary: @accent;
+    @m3-secondary: spin(@accent, -10%);
+    @m3-tertiary: lighten(@accent, 5%);
+
+    @m3-fixed-primary: @m3-fixed-vari[@@accentColor];
+    @m3-fixed-secondary: saturate(@m3-fixed-vari[@@accentColor], 30%);
+    @m3-fixed-tertiary: lighten(@m3-fixed-vari[@@accentColor], 5%);
+    @m3-fixed-on-accent: @m3-fixed-vari[@base];
+
+    @m3-fixed-vari: @rosepine[@base];
+    @m3-emphasize: max((80% - lightness(@accent)), 0%);
+    @m3-deemphasize: 10%;
+    @m3-tint: max((75% - lightness(@accent)), 22.5);
+
+    @m3-inverse-vari: if(@vari = dawn, base, dawn);
+    @m3-black: #000;
+  }
+
+  .with-prefix(@prefix) {
+    // Container should be mixed with base, instead of using opacity.
+    #__m3.token-content-container(error, @love, @base);
+    #__m3.token-content-container(primary, @m3-primary, @base);
+    #__m3.token-content-container(secondary, @m3-secondary, @base);
+    #__m3.token-content-container(tertiary, @m3-tertiary, @base);
+
+    // Fixed variants
+    #__m3.token-content(primary-fixed, @m3-fixed-primary, @m3-fixed-on-accent);
+    #__m3.token(on-primary-fixed-variant, @m3-fixed-on-accent);
+    #__m3.token(primary-fixed-dim, darken(@m3-fixed-primary, @m3-deemphasize));
+
+    #__m3.token-content(secondary-fixed, @m3-fixed-secondary, @m3-fixed-on-accent);
+    #__m3.token(on-secondary-fixed-variant, @m3-fixed-on-accent);
+    #__m3.token(secondary-fixed-dim, darken(@m3-fixed-secondary, @m3-deemphasize));
+
+    #__m3.token-content(tertiary-fixed, @m3-fixed-tertiary, @m3-fixed-on-accent);
+    #__m3.token(on-tertiary-fixed-variant, @m3-fixed-on-accent);
+    #__m3.token(tertiary-fixed-dim, darken(@m3-fixed-tertiary, @m3-deemphasize));
+
+    // Elevation scale
+    #__m3.token(surface-container-lowest, @base);
+    #__m3.token-content(surface, @base, @text);
+    #__m3.token(surface-dim, @base);
+    #__m3.token(surface-container-low, @surface);
+    #__m3.token(surface-container, @surface);
+    #__m3.token(surface-container-high, @surface);
+    #__m3.token(surface-container-highest, @overlay);
+    #__m3.token(surface-bright, @overlay);
+    #__m3.token-content(surface-variant, @overlay, @subtle);
+    // Elevation scale end
+    
+    // Inverse variants
+    #__m3.token(inverse-primary, @rosepine[@@m3-inverse-vari][@@accentColor]);
+    #__m3.token(inverse-surface, @text);
+    #__m3.token(inverse-on-surface, @base);
+    
+    // Outline/Disabled text
+    #__m3.token(outline, @muted);
+    #__m3.token(outline-variant, @highlightMed);
+    
+    // Backdrop
+    #__m3.token(scrim, @m3-black);
+    #__m3.token(shadow, @m3-black);
+    
+    // Deprecated
+    #__m3.token-content(background, @base, @text);
+    #__m3.token(surface-tint, @iris);
+  }
+}
+
+@rosepine: {
+    @base: {@base: #191724; @surface: #1f1d2e; @overlay: #26233a; @muted: #6e6a86; @subtle: #908caa; @text: #e0def4; @love: #eb6f92; @gold: #f6c177; @rose: #ebbcba; @pine: #31748f; @foam: #9ccfd8; @iris: #c4a7e7; @highlightLow: #21202e; @highlightMed: #403d52; @highlightHigh: #524f67;};
+    @moon: {@base: #232136; @surface: #2a273f; @overlay: #393552; @muted: #6e6a86; @subtle: #908caa; @text: #e0def4; @love: #eb6f92; @gold: #f6c177; @rose: #ea9a97; @pine: #3e8fb0; @foam: #9ccfd8; @iris: #c4a7e7; @highlightLow: #2a283e; @highlightMed: #44415a; @highlightHigh: #56526e;};
+    @dawn: {@base: #faf4ed; @surface: #fffaf3; @overlay: #f2e9e1; @muted: #9893a5; @subtle: #797593; @text: #575279; @love: #b4637a; @gold: #ea9d34; @rose: #d7827e; @pine: #286983; @foam: #56949f; @iris: #907aa9; @highlightLow: #f4ede8; @highlightMed: #dfdad9; @highlightHigh: #cecacd;};
+};
